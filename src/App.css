@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+  }
+
+
+
+  .rotating-curved-text {
+    animation: spin 4s linear infinite !important;
+    transform-origin: center !important;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg) !important;
+    }
+    100% {
+      transform: rotate(360deg) !important;
+    }
+  }
+
+  .grrey{
+    display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #1e3791 0%,
+    #6786ef 40%,
+    #8a97c0 55%,
+    #747e9c 60%
+  ); -webkit-background-clip: text;
+  background-clip: text;
+  
+  }
+  .grrey-1{
+    display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #dd6aec 0%,
+    #dced79 40%,
+    #8a97c0 55%,
+    #a2eb9e 60%
+  ); -webkit-background-clip: text;
+  background-clip: text;
+  
+  }
+
+
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .rotating-curved-text {
+    animation: spin 4s linear infinite;
+    transform-origin: center; /* Ensure rotation happens around the center */
+  }

@@ -1,0 +1,37 @@
+{
+    "timeline": [
+      { "id": 1, "content": "Partition of India ", "start": "1947-08-15" },
+      { "id": 2, "content": "Assassination of Mahatma Gandhi", "start": "1948-01-30" },
+      { "id": 3, "content": "Adoption of the Indian Constitution, Republic Day", "start": "1950-01-26" },
+      { "id": 4, "content": "First General Elections", "start": "1951-10-25" },
+      { "id": 5, "content": "Indo-China War", "start": "1962-10-20" },
+      { "id": 6, "content": "Indo-Pakistan War", "start": "1965-09-06" },
+      { "id": 7, "content": "Green Revolution begins", "start": "1966-01-01" },
+      { "id": 8, "content": "Indo-Pakistan War, leading to the creation of Bangladesh", "start": "1971-12-03" },
+      { "id": 9, "content": "Emergency declared by Indira Gandhi", "start": "1975-06-25" },
+      { "id": 10, "content": "Fall of Janata Party government", "start": "1979-01-14" },
+      { "id": 11, "content": "Operation Blue Star and Anti-Sikh Riots", "start": "1984-06-05" },
+      { "id": 12, "content": "Assassination of Prime Minister Indira Gandhi", "start": "1984-10-31" },
+      { "id": 13, "content": "Indo-Sri Lanka Peace Accord", "start": "1987-07-29" },
+      { "id": 14, "content": "Mandal Commission Report on reservation implemented", "start": "1989-08-07" },
+      { "id": 15, "content": "Economic Liberalization under PM P. V. Narasimha Rao", "start": "1991-07-24" },
+      { "id": 16, "content": "Demolition of Babri Masjid and subsequent riots", "start": "1992-12-06" },
+      { "id": 17, "content": "Pokhran-II Nuclear Tests", "start": "1998-05-11" },
+      { "id": 18, "content": "Kargil War with Pakistan", "start": "1999-05-03" },
+      { "id": 19, "content": "Adoption of the Indian National Flag and National Symbols", "start": "1949-07-22" },
+      { "id": 20, "content": "The Untouchability (Offences) Act enacted", "start": "1955-01-01" },
+      { "id": 21, "content": "States Reorganization Act (formation of linguistic states)", "start": "1956-11-01" },
+      { "id": 22, "content": "Naxalite Movement in Naxalbari, West Bengal", "start": "1967-05-25" },
+      { "id": 23, "content": "Kesavananda Bharati Case, leading to the 'Basic Structure' doctrine of the Constitution", "start": "1973-04-24" },
+      { "id": 24, "content": "Railway Strike led by George Fernandes", "start": "1974-05-08" },
+      { "id": 25, "content": "Morarji Desai’s Janata government initiates India’s first Non-Aligned Foreign Policy", "start": "1979-01-01" },
+      { "id": 26, "content": "Asian Games hosted in New Delhi", "start": "1982-11-19" },
+      { "id": 27, "content": "Shah Bano Case", "start": "1985-03-23" },
+      { "id": 28, "content": "AFSPA extended to Jammu & Kashmir", "start": "1987-01-01" },
+      { "id": 29, "content": "Anti-Mandal protests", "start": "1990-06-26" },
+      { "id": 30, "content": "Economic crisis leading to liberalization reforms", "start": "1992-01-01" },
+      { "id": 31, "content": "Formation of United Front Government", "start": "1996-04-21" },
+      { "id": 32, "content": "Golden Jubilee of Independence", "start": "1997-08-15" }
+    ]
+  }
+  

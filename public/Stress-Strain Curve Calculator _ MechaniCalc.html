@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://mechanicalc.com/calculators/material-stress-strain-curve/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		
+			<title>Stress-Strain Curve Calculator | MechaniCalc</title>
+		
+		
+
+		
+			
+			
+			
+			<!-- Google Analytics -->
+			<script async="" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/js"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				
+				gtag('config', 'G-PEM3TKD8K2');
+			</script>
+		
+		
+
+		
+	<link rel="canonical" href="https://mechanicalc.com/calculators/material-stress-strain-curve/">
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "Stress-Strain Curve Calculator",
+			"url": "https://mechanicalc.com/calculators/material-stress-strain-curve/",
+			"image": "https://mechanicalc.com/static/img/Main/ContentsCalc/original-scaled/stress-strain-curve-01.png",
+			"applicationCategory": "Engineering Software",
+			"operatingSystem": "Web",
+			"publisher": "MechaniCalc, Inc."
+		}
+	</script>
+
+		
+
+		
+		
+		<meta name="description" content="
+	The Stress-Strain Curve calculator allows for the calculation of the engineering stress-strain curve of a material using the Ramberg-Osgood equation. We offer a free version of this software.
+">
+
+		
+		<!-- Images: -->
+		<link rel="shortcut icon" href="https://mechanicalc.com/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="https://mechanicalc.com/static/img/favicon.ico" type="image/x-icon">
+		
+		
+		<script>
+function ErrorHandler(){}
+ErrorHandler.recordErrorURL=undefined;ErrorHandler.otherFunc=undefined;ErrorHandler.disable=false;var errorHist=[];ErrorHandler.stringify=function(error){var plainObj={};var props=Object.getOwnPropertyNames(error);for(var ii=0;ii<props.length;ii++){var propName=props[ii];plainObj[propName]=error[propName];}
+return JSON.stringify(plainObj);};ErrorHandler.buildData=function(error){var message=error.message||'';if(typeof message==='object'){try{message=ErrorHandler.stringify(message);}catch(ex){message='Could not stringify msg object';}}
+var embedErrorObj=error.error||{};var errorData={name:error.name||'',message:message,source:error.filename||error.url||'',lineNum:error.lineno||'',colNum:error.colno||'',otherInfo:error.otherInfo||'',stack:error.stack||embedErrorObj.stack||'',errorObj:ErrorHandler.stringify(error),embedErrorObj:ErrorHandler.stringify(embedErrorObj)};return errorData;}
+ErrorHandler.checkIsUnique=function(errorStr){var timeThresh=60*1000;var maxHistLen=10;var timeNow=Date.now();var errRecord={time:timeNow,errorStr:errorStr};var isUnique=true;for(var ii=0;ii<errorHist.length;ii++){var errorStored=errorHist[ii];if(timeNow-errorStored.time<=timeThresh){if(errorStr===errorStored.errorStr){isUnique=false;break;}}}
+errorHist.splice(0,(errorHist.length-maxHistLen));errorHist.push(errRecord);return isUnique;}
+ErrorHandler.record=function(error){if(ErrorHandler.disable){return;}
+var errorData=ErrorHandler.buildData(error);var errorStr=JSON.stringify(errorData).replace(new RegExp('&','g'),"_");var isErrUnique=ErrorHandler.checkIsUnique(errorStr);if(!isErrUnique){return;}
+var postVars='data='+errorStr;if(window.XMLHttpRequest){var req=new XMLHttpRequest();req.open("POST",ErrorHandler.recordErrorURL,true);req.setRequestHeader("Content-Type","application/x-www-form-urlencoded");req.send(postVars);}
+if(ErrorHandler.otherFunc){ErrorHandler.otherFunc(errorData);}};if(window.addEventListener){window.addEventListener('error',function(e){ErrorHandler.record(e);});}else{window.onerror=function(msg,url,lineno,colno,error){var errorObj={message:msg,filename:url,lineno:lineno,colno:colno,otherInfo:'from window.onerror',error:error};ErrorHandler.record(errorObj);};}</script>
+
+		<script>
+			ErrorHandler.recordErrorURL = "/record-client-error";
+			ErrorHandler.disable = false;
+		</script>
+		
+		
+		<script>
+function ResourceLoader(){var thisObj=this;this.scripts={};this.styleSheets={};var isPageLoaded=false;this.arrImportAfterLoad_JS=[];this.arrImportAfterLoad_CSS=[];this.arrBlocked_JS=[];var subscriptionList_JS=[];var subscriptionList_CSS=[];var subscriptionList_Page=[];this.loadErrorURL=undefined;this.defineJS=function(name,source,dependNameArr){if(dependNameArr===undefined){dependNameArr=[];}else if(typeof dependNameArr==="string"){dependNameArr=[dependNameArr];}
+var script={source:source,dependsArr:dependNameArr,loaded:false};this.scripts[name]=script;};this.defineCSS=function(name,elmID,source){var css={source:source,elmID:elmID,loaded:false};this.styleSheets[name]=css;};this.importJS=function(nameArr,_blockArr){if(typeof nameArr==="string"){nameArr=[nameArr];}
+var blockArr=_blockArr||[];if(typeof blockArr==="string"){blockArr=[blockArr];}
+var addWithDependencies=function(name){if(thisObj.arrImportAfterLoad_JS.indexOf(name)===-1){var script=thisObj.scripts[name];if(!script){console.error('Error: Script name "'+name+'" not in resource list!');return;}
+thisObj.arrImportAfterLoad_JS.push(name);for(var ii=0;ii<script.dependsArr.length;ii++){var dependsName=script.dependsArr[ii];var isBlocked=blockArr.indexOf(dependsName)!==-1;if(isBlocked){thisObj.arrBlocked_JS.push(dependsName);}else{addWithDependencies(dependsName);}}}};for(var ii=0;ii<nameArr.length;ii++){addWithDependencies(nameArr[ii]);}};this.importCSS=function(nameArr){var addToListStart=function(name){if(thisObj.arrImportAfterLoad_CSS.indexOf(name)===-1){var sheet=thisObj.styleSheets[name];if(!sheet){console.error('Error: Style sheet "'+name+'" not in resource list!');return;}
+thisObj.arrImportAfterLoad_CSS.push(name);}};if(typeof nameArr==="string"){addToListStart(nameArr);}else{for(var ii=0;ii<nameArr.length;ii++){addToListStart(nameArr[ii]);}}};this.subscribeOnLoadedJS=function(nameArr,func){__subscribeOnLoaded_Resource(nameArr,func,"js");};this.subscribeOnLoadedCSS=function(nameArr,func){__subscribeOnLoaded_Resource(nameArr,func,"css");};var __subscribeOnLoaded_Resource=function(nameArr,func,modeStr){var arrImport;var subList;var desc;if(modeStr==="js"){arrImport=thisObj.arrImportAfterLoad_JS;subList=subscriptionList_JS;desc="Script";}else{arrImport=thisObj.arrImportAfterLoad_CSS;subList=subscriptionList_CSS;desc="StyleSheet";}
+if(typeof nameArr==="string"){nameArr=[nameArr];}
+for(var ii=0;ii<nameArr.length;ii++){var name=nameArr[ii];if(arrImport.indexOf(name)===-1){console.error('Error: '+desc+' name "'+name+'" will not be loaded! Cannot subscribe.');return;}}
+subList.push({nameArr:nameArr,func:func,called:false});};this.subscribeOnPageLoaded=function(func){if(isPageLoaded){func();}else{subscriptionList_Page.push(func);}};this.__pageIsLoaded=function(){isPageLoaded=true;for(var ii=0;ii<subscriptionList_Page.length;ii++){var func=subscriptionList_Page[ii];func();}};this.__loadResources=function(){__importCSS();__setLoadTimer(5000);__importNextFreeScripts();};var __callSubscribers_ResourceLoad=function(modeStr){var subscriptionList=(modeStr==="js")?subscriptionList_JS:subscriptionList_CSS;for(var ii=0;ii<subscriptionList.length;ii++){var sub=subscriptionList[ii];if(!sub.called){var allLoaded=__checkIfLoaded(sub.nameArr,modeStr);if(allLoaded){sub.func();sub.called=true;}}}};var loadTimerDelayDefault=1500;var loadTimer=undefined;var __setLoadTimer=function(_loadTimerDelay){loadTimer=setTimeout(function(){if(window.XMLHttpRequest){var ii;var name;var arrCSS=[];for(ii=0;ii<thisObj.arrImportAfterLoad_CSS.length;ii++){name=thisObj.arrImportAfterLoad_CSS[ii];arrCSS.push({name:name,loaded:thisObj.styleSheets[name].loaded});}
+var arrJS=[];for(ii=0;ii<thisObj.arrImportAfterLoad_JS.length;ii++){name=thisObj.arrImportAfterLoad_JS[ii];arrJS.push({name:name,loaded:thisObj.scripts[name].loaded});}
+var postVars='cssStr='+JSON.stringify(arrCSS)+'&jsStr='+JSON.stringify(arrJS);var req=new XMLHttpRequest();req.open("POST",thisObj.loadErrorURL,true);req.setRequestHeader("Content-Type","application/x-www-form-urlencoded");req.send(postVars);}},_loadTimerDelay||loadTimerDelayDefault);};var __importCSS=function(){for(var ii=0;ii<thisObj.arrImportAfterLoad_CSS.length;ii++){var name=thisObj.arrImportAfterLoad_CSS[ii];var sheet=thisObj.styleSheets[name];var getOnLoadFunc=function(sheet){return function(){sheet.loaded=true;__callSubscribers_ResourceLoad("css");};};__importExternalCSS(sheet.elmID,sheet.source,getOnLoadFunc(sheet));}};var pendingCount_JS=0;var __importNextFreeScripts=function(){var ii;var name;var nextFreeNames=[];for(ii=0;ii<thisObj.arrImportAfterLoad_JS.length;ii++){name=thisObj.arrImportAfterLoad_JS[ii];var canLoad=__checkCanLoadScript(name);if(canLoad){nextFreeNames.push(name);}}
+var getSaveAndLoadNextFunc=function(script){return function(){script.loaded=true;clearTimeout(loadTimer);pendingCount_JS-=1;__callSubscribers_ResourceLoad("js");__importNextFreeScripts();};};if(nextFreeNames.length>0){for(ii=0;ii<nextFreeNames.length;ii++){name=nextFreeNames[ii];var script=thisObj.scripts[name];script.loaded="pending";pendingCount_JS+=1;__importExternalJS(script.source,getSaveAndLoadNextFunc(script));}}else{var allLoaded=__checkIfLoaded(thisObj.arrImportAfterLoad_JS,"js");if(!allLoaded&&pendingCount_JS===0){console.error('Error: Some required scripts could not be loaded! (missing dependencies)');}else{clearTimeout(loadTimer);}}};var __importExternalJS=function(src,onLoadFunc){var elmnt=document.createElement("script");elmnt.type="text\/javascript";elmnt.addEventListener('error',function(error){error.otherInfo='Resource failed to load: '+src;throw error;});if(onLoadFunc){elmnt.onload=onLoadFunc;}
+elmnt.src=src;var headElm=document.head||document.getElementsByTagName("head")[0];headElm.appendChild(elmnt);};var __importExternalCSS=function(elmID,src,onLoadFunc){var linkElm=document.getElementById(elmID);linkElm.rel="stylesheet";linkElm.addEventListener('error',function(error){error.otherInfo='Resource failed to load: '+src;throw error;});if(onLoadFunc){linkElm.onload=onLoadFunc;}
+linkElm.href=src;};var __checkCanLoadScript=function(name){var script=thisObj.scripts[name];if(script.loaded===true||script.loaded==="pending"){return false;}
+for(var ii=0;ii<script.dependsArr.length;ii++){var dependsName=script.dependsArr[ii];var isBlocked=thisObj.arrBlocked_JS.indexOf(dependsName)!==-1;if(!isBlocked){var dependScript=thisObj.scripts[dependsName];if(dependScript.loaded!==true){return false;}}}
+return true;};var __checkIfLoaded=function(nameArr,modeStr){var arrToCheck=(modeStr==="js")?thisObj.scripts:thisObj.styleSheets;for(var ii=0;ii<nameArr.length;ii++){var name=nameArr[ii];var resource=arrToCheck[name];if(resource.loaded!==true){return false;}}
+return true;};}</script>
+
+		<script>
+			
+			var resourceLoader = new ResourceLoader();
+			
+			resourceLoader.loadErrorURL = "/resource-load-error";
+			
+			// CSS definitions:
+			resourceLoader.defineCSS('fontAwesome', "id_cssFontAwesome", "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+			// resourceLoader.defineCSS('fontOpenSans', "id_cssFontOpenSans", "/static/css/google-fonts-open-sans.min.css");
+			
+			
+			// JavaScript definitions:
+			resourceLoader.defineJS('bearFight', "/static/js/Libs/bearFight-01h.min.js", undefined);
+			resourceLoader.defineJS('refLib', "/static/js/Libs/refLib-MC-53-03.min.js", ['bearFight']);
+			resourceLoader.defineJS('mathjax', "//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML", undefined);
+			resourceLoader.defineJS('card', "/static/js/Libs/credit_card_manager-04.min.js", undefined);
+			resourceLoader.defineJS('stripe', "https://js.stripe.com/v3/", undefined);
+			resourceLoader.defineJS('paypalCheckout', "https://www.paypal.com/sdk/js?client-id=", undefined);  // only required for PayPal one-time payments
+			resourceLoader.defineJS('mailChimpPopup', "/static/js/Libs3rdParty/mailchimp-embed.min.js", undefined);
+			
+			
+			
+			resourceLoader.defineJS('facebook', "https://connect.facebook.net/en_US/sdk.js", undefined);
+			resourceLoader.defineJS('linkedIn', "//platform.linkedin.com/in.js", undefined);
+			resourceLoader.defineJS('socialMedia', "/static/js/Libs/socialMediaSDKs.js", ['facebook', 'linkedIn']);
+
+			// Load resources common to all pages:
+			resourceLoader.importCSS(['fontAwesome']); // CSS that can be deferred
+			// resourceLoader.importCSS(['fontOpenSans','fontAwesome']); // CSS that can be deferred
+			
+			
+
+			resourceLoader.importJS(['bearFight']);
+		</script>
+
+
+		<!-- Page-specific CSS with low precedence: -->
+		
+		
+		<link id="id_cssFontAwesome" rel="stylesheet" href="./Stress-Strain Curve Calculator _ MechaniCalc_files/font-awesome.min.css">
+		
+		<!-- CSS that needs to be available immediately for all pages for proper rendering: -->
+		<style type="text/css"> * { box-sizing: border-box; } html, body { font-size: 16px; } body { margin: 0; font-family: "Segoe UI", "Trebuchet MS", Verdana, sans-serif; color: #333; line-height: 1.43; } p, ol, ul { margin: 0 0 0.625rem 0; } ol ol, ol ul, ul ol, ul ul { margin-bottom: 0; } a { color: #337ab7; text-decoration: none; } a:focus,a:hover { color: #23527c; text-decoration: underline; } sub, sup { line-height: 1; font-size: 0.75em; } article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary { display: block; } hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ddd; } h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5rem; font-family: inherit; font-weight: 600; line-height: 1.2; color: inherit; } h1 { font-size: 2.5rem; margin-top: 1.34rem; } h2 { font-size: 2rem; margin-top: 1.25rem; } h3 { font-size: 1.75rem; margin-top: 1.2rem; color: rgb(17, 17, 17); } h4 { font-size: 1.5rem; margin-top: 1.15rem; color: rgb(5, 5, 5); } h5 { font-size: 1.25rem; margin-top: 1.13rem; color: rgb(5, 5, 5); } h6 { font-size: 1rem; margin-top: 1.1rem; color: rgb(50, 50, 50); } h1:target::before, h2:target::before, h3:target::before, h4:target::before, h5:target::before, h6:target::before, div:target::before { display: block; content: ""; height: 4rem; margin-top: -4rem; visibility: hidden; pointer-events: none; } .fa-btn-square, .fa-btn-circle { padding: 0.4rem; font-size: 1.1rem; width: 1.9rem; text-align: center; text-decoration: none; } .fa-btn-circle { border-radius: 50%; } .fa-btn-square:hover, .fa-btn-circle:hover { opacity: 0.7; } .fa-facebook { background: #3B5998; color: white; } .fa-twitter { background: #55ACEE; color: white; } .fa-google, .fa-google-plus { background: #dd4b39; color: white; } .fa-google-plus { padding-left: 0.25rem; padding-right: 0.55rem; } .fa-linkedin { background: #007bb5; color: white; } .fa-youtube { background: #bb0000; color: white; } .fa-instagram { background: #125688; color: white; } .fa-pinterest { background: #cb2027; color: white; } .fa-reddit { background: #ff5700; color: white; } img { margin: 0 0 0.625rem 0; vertical-align: middle; } figure { text-align: center; margin: 0 0 0.625rem 0; } figure img { margin-bottom: 0; } figure figcaption { margin-top: 0.25rem; } @media (max-width: 575px) { .hidden-xs { display: none !important; } } @media (min-width: 576px) and (max-width: 767px) { .hidden-sm { display: none !important; } } @media (min-width: 768px) and (max-width: 991px) { .hidden-md { display: none !important; } } @media (min-width: 992px) and (max-width: 1199px) { .hidden-lg { display: none !important; } } @media (min-width: 1200px) { .hidden-xl { display: none !important; } } .row { position: relative; margin: 0 -15px; padding: 0; } .row:after { content: ""; display: table; clear: both; } [class*="col-"] { position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; } .row-tight { margin: 0 -8px; } .row-tight [class*="col-"] { padding-right: 8px; padding-left: 8px; } @media (max-width: 575px) { .row-tight-xs { margin: 0 -8px; } .row-tight-xs [class*="col-"] { padding-right: 8px; padding-left: 8px; } } @media (max-width: 767px) { .row-tight-sm { margin: 0 -8px; } .row-tight-sm [class*="col-"] { padding-right: 8px; padding-left: 8px; } } @media (max-width: 991px) { .row-tight-md { margin: 0 -8px; } .row-tight-md [class*="col-"] { padding-right: 8px; padding-left: 8px; } } [class*="col-xs"] { float: left; } .col-xs-1 {width: 8.3333%;} .col-xs-2 {width: 16.6667%;} .col-xs-3 {width: 25%;} .col-xs-4 {width: 33.3333%;} .col-xs-5 {width: 41.6667%;} .col-xs-6 {width: 50%;} .col-xs-7 {width: 58.3333%;} .col-xs-8 {width: 66.6667%;} .col-xs-9 {width: 75%;} .col-xs-10 {width: 83.3333%;} .col-xs-11 {width: 91.6667%;} .col-xs-12 {width: 100%;} .col-xs-offset-1 {margin-left: 8.3333%;} .col-xs-offset-2 {margin-left: 16.6667%;} .col-xs-offset-3 {margin-left: 25%;} .col-xs-offset-4 {margin-left: 33.3333%;} .col-xs-offset-5 {margin-left: 41.6667%;} .col-xs-offset-6 {margin-left: 50%;} .col-xs-offset-7 {margin-left: 58.3333%;} .col-xs-offset-8 {margin-left: 66.6667%;} .col-xs-offset-9 {margin-left: 75%;} .col-xs-offset-10 {margin-left: 83.3333%;} .col-xs-offset-11 {margin-left: 91.6667%;} .col-xs-offset-12 {margin-left: 100%;} @media (min-width: 576px) { [class*="col-sm"] { float: left; } .col-sm-1 {width: 8.3333%;} .col-sm-2 {width: 16.6667%;} .col-sm-3 {width: 25%;} .col-sm-4 {width: 33.3333%;} .col-sm-5 {width: 41.6667%;} .col-sm-6 {width: 50%;} .col-sm-7 {width: 58.3333%;} .col-sm-8 {width: 66.6667%;} .col-sm-9 {width: 75%;} .col-sm-10 {width: 83.3333%;} .col-sm-11 {width: 91.6667%;} .col-sm-12 {width: 100%;} .col-sm-offset-1 {margin-left: 8.3333%;} .col-sm-offset-2 {margin-left: 16.6667%;} .col-sm-offset-3 {margin-left: 25%;} .col-sm-offset-4 {margin-left: 33.3333%;} .col-sm-offset-5 {margin-left: 41.6667%;} .col-sm-offset-6 {margin-left: 50%;} .col-sm-offset-7 {margin-left: 58.3333%;} .col-sm-offset-8 {margin-left: 66.6667%;} .col-sm-offset-9 {margin-left: 75%;} .col-sm-offset-10 {margin-left: 83.3333%;} .col-sm-offset-11 {margin-left: 91.6667%;} .col-sm-offset-12 {margin-left: 100%;} } @media (min-width: 768px) { [class*="col-md"] { float: left; } .col-md-1 {width: 8.3333%;} .col-md-2 {width: 16.6667%;} .col-md-3 {width: 25%;} .col-md-4 {width: 33.3333%;} .col-md-5 {width: 41.6667%;} .col-md-6 {width: 50%;} .col-md-7 {width: 58.3333%;} .col-md-8 {width: 66.6667%;} .col-md-9 {width: 75%;} .col-md-10 {width: 83.3333%;} .col-md-11 {width: 91.6667%;} .col-md-12 {width: 100%;} .col-md-offset-1 {margin-left: 8.3333%;} .col-md-offset-2 {margin-left: 16.6667%;} .col-md-offset-3 {margin-left: 25%;} .col-md-offset-4 {margin-left: 33.3333%;} .col-md-offset-5 {margin-left: 41.6667%;} .col-md-offset-6 {margin-left: 50%;} .col-md-offset-7 {margin-left: 58.3333%;} .col-md-offset-8 {margin-left: 66.6667%;} .col-md-offset-9 {margin-left: 75%;} .col-md-offset-10 {margin-left: 83.3333%;} .col-md-offset-11 {margin-left: 91.6667%;} .col-md-offset-12 {margin-left: 100%;} } @media (min-width: 992px) { [class*="col-lg"] { float: left; } .col-lg-1 {width: 8.3333%;} .col-lg-2 {width: 16.6667%;} .col-lg-3 {width: 25%;} .col-lg-4 {width: 33.3333%;} .col-lg-5 {width: 41.6667%;} .col-lg-6 {width: 50%;} .col-lg-7 {width: 58.3333%;} .col-lg-8 {width: 66.6667%;} .col-lg-9 {width: 75%;} .col-lg-10 {width: 83.3333%;} .col-lg-11 {width: 91.6667%;} .col-lg-12 {width: 100%;} .col-lg-offset-1 {margin-left: 8.3333%;} .col-lg-offset-2 {margin-left: 16.6667%;} .col-lg-offset-3 {margin-left: 25%;} .col-lg-offset-4 {margin-left: 33.3333%;} .col-lg-offset-5 {margin-left: 41.6667%;} .col-lg-offset-6 {margin-left: 50%;} .col-lg-offset-7 {margin-left: 58.3333%;} .col-lg-offset-8 {margin-left: 66.6667%;} .col-lg-offset-9 {margin-left: 75%;} .col-lg-offset-10 {margin-left: 83.3333%;} .col-lg-offset-11 {margin-left: 91.6667%;} .col-lg-offset-12 {margin-left: 100%;} } @media (min-width: 1200px) { [class*="col-xl"] { float: left; } .col-xl-1 {width: 8.3333%;} .col-xl-2 {width: 16.6667%;} .col-xl-3 {width: 25%;} .col-xl-4 {width: 33.3333%;} .col-xl-5 {width: 41.6667%;} .col-xl-6 {width: 50%;} .col-xl-7 {width: 58.3333%;} .col-xl-8 {width: 66.6667%;} .col-xl-9 {width: 75%;} .col-xl-10 {width: 83.3333%;} .col-xl-11 {width: 91.6667%;} .col-xl-12 {width: 100%;} .col-xl-offset-1 {margin-left: 8.3333%;} .col-xl-offset-2 {margin-left: 16.6667%;} .col-xl-offset-3 {margin-left: 25%;} .col-xl-offset-4 {margin-left: 33.3333%;} .col-xl-offset-5 {margin-left: 41.6667%;} .col-xl-offset-6 {margin-left: 50%;} .col-xl-offset-7 {margin-left: 58.3333%;} .col-xl-offset-8 {margin-left: 66.6667%;} .col-xl-offset-9 {margin-left: 75%;} .col-xl-offset-10 {margin-left: 83.3333%;} .col-xl-offset-11 {margin-left: 91.6667%;} .col-xl-offset-12 {margin-left: 100%;} } .row-table { display: table; margin: 0 -15px; } .row-table::after{ content: ""; display: table; clear: both; } .row-table-full { width: calc(100% + 30px); } .col-table { display: table-cell; padding: 0 15px; vertical-align: top; } .col-table-tight { width: 1px; } .col-table-right { float: right; } .row-table-tight { margin: 0 -8px; } .row-table-tight .col-table { padding: 0 8px; } .row-table-tight.row-table-full { width: calc(100% + 16px); } .row-inline { margin: 0 -15px; } .row-inline::after{ content: ""; display: table; clear: both; } .col-inline { display: inline-block; vertical-align: top; padding: 0 15px; } .col-inline-right { float: right; } .row-inline-tight { margin: 0 -8px; } .row-inline-tight .col-inline { padding: 0 8px; } .display-topleft { position: absolute; left: 0; top: 0 } .display-topright { position: absolute; right: 0; top: 0 } .display-bottomleft { position: absolute; left: 0; bottom: 0 } .display-bottomright { position: absolute; right: 0; bottom: 0 } .display-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); } .display-left { position: absolute; top: 50%; left: 0%; transform: translate(0%,-50%); } .display-right { position: absolute; top: 50%; right: 0%; transform: translate(0%,-50%); } .display-topcenter { position: absolute; left: 50%; top: 0; transform: translate(-50%,0%); } .display-bottomcenter { position: absolute; left: 50%; bottom: 0; transform: translate(-50%,0%); } nav.navbar { width: 100%; position: relative; margin: 0; padding: 0 3rem; line-height: 1.5; background-color: #333333; z-index: 1000; } nav.navbar.nav-fixed { position: fixed; top: 0; z-index: 1100; } nav.navbar.nav-fixed ~ .page-body { padding-top: 2.85rem; } nav.navbar.nav-fixed ~ .page-body .sidebar-fixed { top: 2.85rem; } nav.navbar .nav-right { float: right; } nav.navbar a { color: rgb(185, 185, 185); display: block; float: left; text-decoration: none; padding: 0.75rem 1rem; } nav.navbar a:hover { color: white; background-color: black; } nav.navbar .nav-brand a:hover { background-color: transparent; } nav.navbar a.nav-accent { color: white; background-color: rgb(33, 22, 189); } nav.navbar a.nav-accent:hover { color: white; background-color: rgb(21, 11, 156); } nav.navbar .nav-dropdown { float: left; position: relative; } nav.navbar .nav-dropdown-content { display: none; position: absolute; padding: 0.25rem 0; top: 100%; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2); z-index: 1000; } nav.navbar .nav-right .nav-dropdown-content { right: 0; } nav.navbar .nav-dropdown-content a { float: none; display: block; padding: 0.25rem 1rem; color: black; text-align: left; white-space: nowrap; } nav.navbar .nav-dropdown-content a:hover { background-color: #dddddd; } nav.navbar .nav-dropdown:hover .nav-dropdown-content { display: block; } nav.navbar .nav-dropdown-divider { height: 1px; margin: 0.25rem 0; overflow: hidden; background-color: #e5e5e5; } nav.navbar .nav-toggler { display: none; } @media (max-width: 992px) { nav.navbar { padding-left: 0; padding-right: 0; } } @media (max-width: 768px) { nav.navbar .nav-collapse { display: none; } nav.navbar .nav-toggler { display: block; } } @media (max-width: 768px) { nav.navbar.expanded { position: relative; } nav.navbar.expanded .nav-toggler a { position: absolute; right: 0; top: 0; } nav.navbar.expanded .nav-brand, nav.navbar.expanded .nav-dropdown, nav.navbar.expanded .nav-collapse { float: none; display: block; text-align: left; } nav.navbar.expanded .nav-collapse a, nav.navbar.expanded .nav-dropdown a, nav.navbar.expanded .nav-brand a { float: none; display: block; text-align: left; } nav.navbar.expanded .nav-dropdown-content { position: relative; } } html { position: relative; min-height: 100%; } body { margin-bottom: 4rem; } footer { width: 100%; padding: 0; background-color: #f5f5f5; } footer.foot-sticky { position: absolute; bottom: 0; } footer p { padding: 0; margin: 1rem 0; } .sb-content-container { position: relative; } .sb-content { position: relative; margin-right: 0; margin-left: 0; transition: margin 0.5s ease; } .sidebar { position: absolute; top: 0; width: 0px; padding: 0; background-color: #f5f5f5; z-index: 1000; transition: width 0.5s ease; overflow-x: hidden; } .sidebar-fixed { position: fixed; height: 100%; overflow-y: auto; } .sidebar-left { left: 0; } .sidebar-right { right: 0; } @media (min-width: 992px) { .sidebar-left { width: 300px; padding: 0 1rem; } .sidebar-left ~ .sb-content { margin-left: 300px; } footer.foot-sticky > .container.left-sidebar-exists { padding-left: 300px; } } @media (min-width: 1200px) { .sidebar-right { width: 300px; padding: 0 1rem; } .sidebar-right ~ .sb-content { margin-right: 300px; } footer.foot-sticky > .container.right-sidebar-exists { padding-right: 300px; } } .card { margin-bottom: 1.25rem; background-color: #fff; border: 1px solid #ddd; border-radius: 0.25rem; } .card-content { padding: 1rem 1rem; } .card-header { padding: 0.75rem 1rem; background-color: #f4f4f4; border-bottom: 1px solid #ddd; } .card-header h2, .card-header h3, .card-header h4, .card-header h5 { margin: 0; } .card-content img { margin-bottom: 0; } .card-content > *:not(div):first-child { margin-top: 0; } .card-content > *:not(div):last-child { margin-bottom: 0; } .card-content h2, .card-content h3, .card-content h4, .card-content h5 { margin-bottom: 1rem; } .card-content.card-border-top { border-top: 1px solid #ddd; } .tab-list { display: table; margin-bottom: 1rem; width: 100%; border-bottom: 1px solid #ddd; } a.tab-item { display: block; float: left; top: 0; left: 0; color: #007bff; background-color: #eee; text-decoration: none; padding: 0.63rem 0.93rem; margin-right: 2px; margin-bottom: -1px; border: 1px solid transparent; border-radius: 0.25rem 0.25rem 0 0; } a.tab-item.active { color: black; background-color: white; border: 1px solid #ddd; border-bottom-color: transparent; } a.tab-item:hover { color: #0053ad; border: 1px solid #ddd; border-bottom-color: transparent; } a.tab-item.active:hover { color: black; } .tab-panel { display: none; } .tab-panel.active { display: block; } .collapse-toggle { display: none; } .collapse-content { max-height: 0; overflow: hidden; background-color: #f1f1f1; padding: 0 1rem; } .collapse-label { display: block; color: white; background-color: #777777; padding: 0.8rem 0.7rem; cursor: pointer; } .collapse-label:hover { background-color: #555555; } .collapse-label::before { content: '\002B'; color: white; font-size: 1.2rem; font-weight: bold; line-height: 1; margin-right: 0.25rem; } .collapse-toggle:checked ~ .collapse-label::before { content: '\2212'; } .collapse-toggle:checked ~ .collapse-content { max-height: 100%; padding-top: 1rem; padding-bottom: 1rem; } .collapse-content > *:not(div):last-child { margin-bottom: 0; } .hero { position: relative; padding: 0; margin-bottom: 2rem; border-radius: 0; } .hero img { object-fit: cover; width: 100%; min-height: 350px; max-height: 500px; display: block; } .hero-background { min-height: 350px; max-height: 500px; } .hero .hero-container { width: 100%; padding: 0 1rem; } @media (min-width: 768px) { .hero .hero-container { padding: 0 2rem; } } .carousel { position: relative; } .carousel-item { display: none; position: relative; } .carousel-item.active { display: block; } .carousel-item img { width: 100%; display: block; } .carousel-number { position: absolute; top: 0; left: 0; padding: 0.5rem 0.75rem; color: white; } .carousel-caption { padding: 1rem; color: white; } .carousel-control-prev, .carousel-control-next { position: absolute; top: 50%; transform: translate(0%,-50%); cursor: pointer; color: white; font-weight: bold; font-size: 1.2rem; padding: 1rem; transition: background-color 0.5s ease; } .carousel-control-prev { left: 0; } .carousel-control-next { right: 0; } .carousel-control-prev:hover, .carousel-control-next:hover { background-color: rgba(0,0,0,0.8); color: white; text-decoration: none; } .carousel-indicators { text-align: center; } .carousel-indicators span { cursor: pointer; height: 0.9rem; width: 0.9rem; border-radius: 50%; margin: 0.625rem 2px; background-color: #bbb; display: inline-block; transition: background-color 0.6s ease; } .carousel-indicators span.active, .carousel-indicators span:hover { background-color: #717171; } .carousel.carousel-trans-fade .carousel-item { animation-name: fade; animation-duration: 0.7s; } @keyframes fade { from { opacity: .6 } to { opacity: 1} } table { margin: 0 0 0.625rem 0; border-collapse: collapse; } table th, table td { border: none; padding: 1px 0.94rem; vertical-align: top; } table th { font-weight: 500; } table.tbl-center { margin-left: auto; margin-right: auto; } table.tbl-right { float: right; } table caption { font-weight: 500; margin-bottom: 0.3rem; } table caption .font-normal { font-weight: normal; margin-top: 0.3rem; } table img, table figure { margin: 0; } table.tbl-border-all td, table.tbl-border-all th { border: 1px solid DarkGray; } table.tbl-border-btm td, table.tbl-border-btm th { border-bottom: 1px solid DarkGray; } table.tbl-border-topbtm td, table.tbl-border-topbtm th { border-top: 1px solid DarkGray; border-bottom: 1px solid DarkGray; } table.tbl-border-shell th { border: 1px solid DarkGray; } table.tbl-border-shell td { border-left: 1px solid DarkGray; border-right: 1px solid DarkGray; border-top: none; border-bottom: none; } table.tbl-border-shell tr:last-child td { border-bottom: 1px solid DarkGray; } table.tbl-border-shell tr:first-child td { border-top: 1px solid DarkGray; } table.tbl-border-none td, table.tbl-border-none th { border: none; } table tr.row-border-top td, table tr.row-border-top th { border-top: 1px solid DarkGray; } table tr.row-border-bot td, table tr.row-border-bot th { border-bottom: 1px solid DarkGray; } table tr.row-border-none td, table tr.row-border-none th { border: none; } table.tbl-vert-align-middle th, table.tbl-vert-align-middle td { vertical-align: middle; } table.tbl-vert-align-bottom th, table.tbl-vert-align-bottom td { vertical-align: bottom; } table.tbl-text-align-center th, table.tbl-text-align-center td { text-align: center; } table.tbl-text-align-left-col-1 th:nth-child(1), table.tbl-text-align-left-col-1 td:nth-child(1) { text-align: left; } table th.tbl-col-left, table td.tbl-col-left { text-align: left; } table.tbl-pad-vert-lg th { padding-top: 0.63rem; padding-bottom: 0.63rem; } table.tbl-pad-vert-lg td { padding-top: 0.5rem; padding-bottom: 0.5rem; } table.tbl-pad-vert-md th { padding-top: 0.47rem; padding-bottom: 0.47rem; } table.tbl-pad-vert-md td { padding-top: 0.31rem; padding-bottom: 0.31rem; } table.tbl-pad-vert-sm th { padding-top: 0.28rem; padding-bottom: 0.28rem; } table.tbl-pad-vert-sm td { padding-top: 0.19rem; padding-bottom: 0.19rem; } table.tbl-pad-vert-ss th { padding-top: 0.22rem; padding-bottom: 0.22rem; } table.tbl-pad-vert-ss td { padding-top: 0.15rem; padding-bottom: 0.15rem; } table.tbl-pad-vert-xs th { padding-top: 0.18rem; padding-bottom: 0.18rem; } table.tbl-pad-vert-xs td { padding-top: 0.12rem; padding-bottom: 0.12rem; } table.tbl-pad-vert-none td, table.tbl-pad-vert-none th { padding-top: 0px; padding-bottom: 0px; } table tr.row-pad-top-md td, table tr.row-pad-top-md th { padding-top: 0.47rem; } table tr.row-pad-bot-md td, table tr.row-pad-bot-md th { padding-bottom: 0.47rem; } table.tbl-pad-horiz-xl td, table.tbl-pad-horiz-xl th { padding-left: 2rem; padding-right: 2rem; } table.tbl-pad-horiz-lg td, table.tbl-pad-horiz-lg th { padding-left: 1.3rem; padding-right: 1.3rem; } table.tbl-pad-horiz-md td, table.tbl-pad-horiz-md th { padding-left: 1rem; padding-right: 1rem; } table.tbl-pad-horiz-ms td, table.tbl-pad-horiz-ms th { padding-left: 0.63rem; padding-right: 0.63rem; } table.tbl-pad-horiz-sm td, table.tbl-pad-horiz-sm th { padding-left: 0.5rem; padding-right: 0.5rem; } table.tbl-pad-horiz-ss td, table.tbl-pad-horiz-ss th { padding-left: 0.3rem; padding-right: 0.3rem; } table.tbl-pad-horiz-xs td, table.tbl-pad-horiz-xs th { padding-left: 0.15rem; padding-right: 0.15rem; } @media (max-width: 576px) { table.tbl-pad-horiz-resp td, table.tbl-pad-horiz-resp th { padding-left: 0.15rem; padding-right: 0.15rem; } } @media (min-width: 576px) and (max-width: 768px) { table.tbl-pad-horiz-resp td, table.tbl-pad-horiz-resp th { padding-left: 0.5rem; padding-right: 0.5rem; } } table.tbl-striped-even tr:nth-child(even) { background-color: #f3f3f3; } table.tbl-striped-odd tr:nth-child(odd) { background-color: #f3f3f3; } table.tbl-gap-col-2 td:nth-child(2), table.tbl-gap-col-3 td:nth-child(3), table.tbl-gap-col-4 td:nth-child(4), table.tbl-gap-col-5 td:nth-child(5), table.tbl-gap-col-6 td:nth-child(6), table.tbl-gap-col-7 td:nth-child(7), table.tbl-gap-col-8 td:nth-child(8), table.tbl-gap-col-9 td:nth-child(9), table.tbl-gap-col-10 td:nth-child(10), table.tbl-gap-col-11 td:nth-child(11), table.tbl-gap-col-12 td:nth-child(12), table.tbl-gap-col-13 td:nth-child(13), table.tbl-gap-col-14 td:nth-child(14), table.tbl-gap-col-15 td:nth-child(15) { border: none; padding-right: 1px; } table td.gap-col, table th.gap-col { border: none; padding-right: 1px; } table.tbl-fixed-full { table-layout: fixed; width: 100%; margin-left: 0; margin-right: 0; } table tr.row-note td { border: none !important; text-align: left; font-size: 0.9rem; padding-top: 0.25rem; padding-bottom: 0.05rem; } .tbl-border-all tr.row-note ~ tr.row-note td { padding-top: 0.05rem; } .grid-table { margin: 0; border: 1.5px solid silver; table-layout: fixed; width: 100%; overflow: hidden; user-select: none; } .grid-table:focus { outline: none; } .grid-table thead { display: block; border-bottom: 1px solid silver; background-image: linear-gradient(#f9f9f9, #e4e4e4); box-shadow: 0 1px 4px #ddd; cursor: default; text-align: left; } .grid-table thead tr.col-group { text-align: center; border-bottom: 1px solid silver; } .grid-table thead th[class*="sort-"]::after { float: right; font-size: 0.75rem; margin-top: 0.12rem; color: #777; } .grid-table thead th.sort-asc::after { content: '\25B2'; } .grid-table thead th.sort-desc::after { content: '\25BC'; } .grid-table tfoot { border-top: 1px solid silver; background-color: #f0f0f0; box-shadow: 0px -1px 4px #ddd; } .grid-table tfoot td { min-width: 100% !important; color: black !important; } .grid-table tfoot div { float: left; } .grid-table tbody { display: block; overflow-y: auto; overflow-x: hidden; cursor: pointer; } .grid-table tbody.noscroll { overflow: hidden; } .grid-table td, .grid-table th { font-size: 0.9rem; line-height: 1.35; padding: 0.13rem 0.5rem; border-left: 1px solid silver; border-right: 1px solid silver; overflow: hidden; white-space: nowrap; } .grid-table td:nth-child(1), .grid-table th:nth-child(1) { border-left: none; } .grid-table td:last-child, .grid-table th:last-child { border-right: none; } .grid-table th { font-weight: 500; padding-top: 0.23rem; padding-bottom: 0.23rem; } .grid-table tbody tr:first-child td { padding-top: 3px; } .grid-table.size-medium td, .grid-table.size-medium th { font-size: 0.82rem; padding-left: 0.3rem; padding-right: 0.3rem; line-height: 1.4; } .grid-table.size-small td, .grid-table.size-small th { font-size: 0.75rem; padding-left: 0.2rem; padding-right: 0.2rem; line-height: 1.4; } .grid-table tbody tr:nth-child(even) { background-color: #f3f6fa; } .grid-table tbody tr:hover { background-color: #e6f0ff; } .grid-table tbody tr.selected { background-color: #b6d5ff; } .form-group { margin-bottom: 1rem; } .input-group { position: relative; display: table; } .input-group .input-group-ctrl { display: table-cell; } input, button, select, optgroup, textarea { margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; } input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type*="date"], input[type="month"], select, optgroup, textarea { display: block; width: 100%; padding: 0.375rem 0.75rem; color: #444; background-color: #fff; border: 1px solid #ccc; } .form-group label { display: inline-block; font-weight: 600; padding: 0.375rem 0; border: 1px solid transparent; } textarea { overflow: auto; resize: vertical; } .form-plaintext { background-color: transparent; padding: 0.375rem 0; margin: 0; border: 1px solid transparent; } input[type="checkbox"], input[type="radio"] { margin-right: 0.38rem; cursor: pointer; } label.checkbox, label.radio { display: block; font-weight: normal; padding: 0; cursor: pointer; white-space: nowrap; } label.checkbox.form-full-pad, label.radio.form-full-pad { padding: 0.375rem 0; } label.checkbox.disabled, label.radio.disabled { cursor: not-allowed; } .checkbox-inline label, .radio-inline label { display: inline-block; margin-right: 1rem; } input[type="file"] { display: block; width: 100%; padding: 0; } input[type="range"] { display: block; width: 100%; padding: 0.375rem 0; cursor: pointer; } input[type="color"] { width: 3.5rem; height: 1.75rem; padding: 1px 2px; cursor: pointer; } input:disabled, input[readonly], select:disabled, select[readonly], textarea:disabled, textarea[readonly] { background-color: #e9ecef; cursor: not-allowed; } .label-right { text-align: right; } @media (max-width: 575px) { [class*="col-sm"]:not([class*="col-xs"]).label-right { text-align: left; } } @media (max-width: 767px) { [class*="col-md"]:not([class*="col-xs"]).label-right { text-align: left; } } @media (max-width: 991px) { [class*="col-lg"]:not([class*="col-xs"]).label-right { text-align: left; } } @media (max-width: 1199px) { [class*="col-xl"]:not([class*="col-xs"]).label-right { text-align: left; } } .form-help-msg { font-size: 0.9rem; } .form-error .form-help-msg { color: #c12525; } .form-error label { color: #c12525; font-weight: bold; } .form-error input, .form-error textarea, .form-error select { color: #c12525; border: 1px solid #c12525; } .btn { display: inline-block; text-align: center; white-space: nowrap; vertical-align: middle; border: none; color: white; padding: 0.5rem 1rem; font-size: 1rem; border-radius: 0; text-decoration: none; cursor: pointer; } .btn:hover { color: white; text-decoration: none; } .btn-sm { font-size: 0.875rem; padding: 0.25rem 0.5rem; } .btn-md { font-size: 1rem; padding: 0.375rem 0.75rem; } .btn-lg { font-size: 1.125rem; padding: 0.875rem 1.75rem; } .btn.btn-disabled, .btn:disabled { opacity: 0.65; cursor: not-allowed; } .btn-primary {background-color: #007bff;} .btn-primary:hover, .btn-primary:focus {background-color: #0069d9;} .btn-success {background-color: #4CAF50;} .btn-success:hover, .btn-success:focus {background-color: #46a049;} .btn-info {background-color: #5bc0de;} .btn-info:hover, .btn-info:focus {background: #41b5d8;} .btn-warning {background-color: #ff9800;} .btn-warning:hover, .btn-warning:focus {background: #e68a00;} .btn-danger {background-color: #f44336;} .btn-danger:hover, .btn-danger:focus {background: #da190b;} .btn-default {background-color: #f6f6f6; border: 1px solid #ccc; color: black;} .btn-default:hover, .btn-default:focus { color: black; background: #e6e6e6; } .btn-dropdown-container { position: relative; display: inline-block; } .btn-dropdown-content { display: none; position: absolute; background-color: #f9f9f9; padding: 0.25rem 0; min-width: 100%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1000; } .btn-dropdown-container:hover .btn-dropdown-content { display: block; } .btn-dropdown-container.btn-dropdown-right .btn-dropdown-content { right: 0; } .btn-dropdown-content a { display: block; color: black; padding: 0.25rem 1rem; text-align: left; text-decoration: none; white-space: nowrap; } .btn-dropdown-content a:hover { background-color: #f1f1f1 } .btn-dropdown-divider { height: 1px; margin: 0.35rem 0; overflow: hidden; background-color: #e5e5e5; } [tooltip]{ position: relative; overflow: visible; } [tooltip]::before, [tooltip]::after { position: absolute; transition: opacity 0.3s; z-index: 1000; visibility: hidden; opacity: 0; } [tooltip]::before { content: ""; border-width: 6px; } [tooltip]::after { content: attr(tooltip); width: 160px; white-space: normal; font-size: 0.8rem; font-weight: 400; line-height: 1.3; color: #fff; background-color: #444; text-align: center; padding: 0.375rem; border-radius: 0.375rem; } [tooltip]:hover::before, [tooltip]:hover::after { visibility: visible; opacity:1 } [tooltip].tooltip-bump-right-1::after { margin-left: 1rem; } [tooltip].tooltip-bump-right-2::after { margin-left: 2rem; } [tooltip].tooltip-bump-left-1::after { margin-left: -1rem; } [tooltip].tooltip-bump-left-2::after { margin-left: -2rem; } [tooltip].tooltip-bump-left-3::after { margin-left: -3rem; } [tooltip-position='bottom']::before { top: 100%; left: 50%; transform: translateX(-50%); border-style: solid; border-color: transparent transparent #444 transparent; } [tooltip-position='bottom']::after { top: 100%; left: 50%; transform: translateX(-50%) translateY(12px); } [tooltip-position='top']::before { bottom: 100%; left: 50%; transform: translateX(-50%); border-style: solid; border-color: #444 transparent transparent transparent; } [tooltip-position='top']::after { bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-12px); } [tooltip-position='left']::before { top: 50%; right: 100%; transform: translateY(-50%); border-style: solid; border-color: transparent transparent transparent #444; } [tooltip-position='left']::after { top: 50%; right: 100%; transform: translateX(-12px) translateY(-50%); } [tooltip-position='right']::before { top: 50%; left: 100%; transform: translateY(-50%); border-style: solid; border-color: transparent #444 transparent transparent; } [tooltip-position='right']::after { top: 50%; left: 100%; transform: translateX(12px) translateY(-50%); } .alert { padding: 1rem 1.25rem; margin: 0.875rem 0; background-color: #31708f; color: white; border-radius: 0; opacity: 1; transition: opacity 0.35s; } .alert-danger { background-color: #f44336; } .alert-success { background-color: #4CAF50; } .alert-info { background-color: #2196F3; } .alert-warning { background-color: #ff9800; } .alert-close { margin-left: 0.875rem; color: white; font-weight: bold; float: right; font-size: 1.375rem; line-height: 1.25rem; cursor: pointer; transition: color 0.3s; } .alert-close:hover { color: black; } #toast { position: fixed; bottom: 2rem; left: 50%; visibility: hidden; min-width: 16rem; margin-left: -8rem; padding: 1rem; border-radius: 2px; background-color: #333; color: #fff; text-align: center; z-index: 1000; font-size: 1rem; } #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; } @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 2rem; opacity: 1;} } @keyframes fadeout { from {bottom: 2rem; opacity: 1;} to {bottom: 0; opacity: 0;} } .modal { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); transition: opacity 300ms ease; opacity: 0; } .modal.shown { opacity: 1; } .modal-content { position: relative; top: 50%; margin: auto; transform: translate(0, -75%); width: 80%; max-width: 500px; background-color: #fff; transition: transform 500ms ease; } .modal.shown .modal-content { transform: translate(0,-50%); } .modal-header { padding: 1rem; border-bottom: 1px solid #ddd; } .modal-footer { text-align: right; padding: 1rem; border-top: 1px solid #ddd; } .modal-body { padding: 1rem; } .modal-body *:first-child { margin-top: 0; } .modal-body *:last-child { margin-bottom: 0; } .modal-close-head { position: absolute; top: 0; right: 0; padding: 1rem; font-size: 1.5rem; font-weight: 700; line-height: 1; color:black; opacity: 0.5; } .modal-close-head:hover { cursor: pointer; opacity: 1; } .modal-title { margin: 0; line-height: 1.5; } .spinner { display: inline-block; border: 0.3rem solid #3498db; border-right-color: transparent; border-radius: 50%; width: 2rem; height: 2rem; animation: spinner-spin 0.75s linear infinite; } @keyframes spinner-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } .container { padding: 0 1rem; } @media (min-width: 768px) { .container { padding: 0 4rem; } } .page-header { padding-bottom: 0.563rem; margin-bottom: 1.25rem; border-bottom: 1px solid #e6e6e6; } .tab { padding-left: 1.5rem !important; } .pad-left-0 { padding-left: 0 !important; } .pad-left-1 { padding-left: 1rem !important; } .pad-left-2 { padding-left: 2rem !important; } .pad-right-0 { padding-right: 0 !important; } .pad-top-0 { padding-top: 0 !important; } .pad-top-0p38 { padding-top: 0.375rem !important; } .pad-top-0p5 { padding-top: 0.5rem !important; } .pad-top-0p63 { padding-top: 0.625rem !important; } .pad-top-0p75 { padding-top: 0.75rem !important; } .pad-top-0p88 { padding-top: 0.875rem !important; } .pad-top-1 { padding-top: 1rem !important; } .margin-0 { margin: 0 !important; } .margin-left-2 { margin-left: 2rem !important; } .margin-top-0 { margin-top: 0 !important; } .margin-bot-0 { margin-bottom: 0 !important; } .margin-bot-0p5 { margin-bottom: 0.5rem !important; } .margin-bot-0p63 { margin-bottom: 0.63rem !important; } .margin-bot-1 { margin-bottom: 1rem !important; } .margin-bot-1p25 { margin-bottom: 1.25rem !important; } .text-left { text-align: left; } .text-right { text-align: right; } .text-center { text-align: center; } .text-justify { text-align: justify; } .text-nowrap { white-space: nowrap; } .text-lowercase { text-transform: lowercase; } .text-uppercase { text-transform: uppercase; } .text-capitalize { text-transform: capitalize; } .text-overline { text-decoration: overline; } .text-overline-border { border-top: 1px solid black; } .text-double-overline { border-top: 4px double black; } .text-muted { color: #6c757d; } .text-important { color: crimson; } .vertical-top { vertical-align: top; } .vertical-middle { vertical-align: middle; } .vertical-bottom { vertical-align: bottom; } .math-font { font-family: 'Cambria Math', Cambria, 'Times New Roman', serif; display: inline-block; transform: skewX(-12deg); font-size: 1.12rem; line-height: 1.05; padding-right: 0.1rem; white-space: nowrap; } .math-font.upright { font-style: normal; transform: skewX(0); } .math-container { white-space: nowrap; } .math-standalone { margin: 0.63rem 0; text-align: center; } .math-svg { font-size: 1rem; } .math-svg-1p05 { font-size: 1.05rem; } .math-svg-1p06 { font-size: 1.06rem; } .math-svg-1p1 { font-size: 1.1rem; } .math-svg-1p15 { font-size: 1.15rem; } .math-array { margin-bottom: 0.63rem; } .math-array p { margin-bottom: 0.25rem; } .math-aligned-sup-sub { position: relative; left: -0.45em; } .math-sqrt { border-top: 1px solid black; padding-top: 2px; } .numbered-equation-container { width: 100%; position: relative; margin: 0; padding: 0; } .numbered-equation-number { display: none; position: absolute; top: 50%; right: 0%; transform:translateY(-50%); text-align: right; } @media (min-width: 576px) { .numbered-equation-number { display: block; } } .font-resp-0p7 { font-size: 0.7rem; } .font-resp-0p8 { font-size: 0.8rem; } .font-resp-0p9 { font-size: 0.9rem; } .font-resp-1 { font-size: 1rem; } @media (max-width: 1200px) { .font-resp-lg-0p6 { font-size: 0.6rem; } .font-resp-lg-0p7 { font-size: 0.7rem; } .font-resp-lg-0p8 { font-size: 0.8rem; } .font-resp-lg-0p9 { font-size: 0.9rem; } } @media (max-width: 992px) { .font-resp-md-0p6 { font-size: 0.6rem; } .font-resp-md-0p7 { font-size: 0.7rem; } .font-resp-md-0p8 { font-size: 0.8rem; } .font-resp-md-0p9 { font-size: 0.9rem; } } @media (max-width: 768px) { .font-resp-sm-0p5 { font-size: 0.5rem; } .font-resp-sm-0p6 { font-size: 0.6rem; } .font-resp-sm-0p7 { font-size: 0.7rem; } .font-resp-sm-0p8 { font-size: 0.8rem; } .font-resp-sm-0p9 { font-size: 0.9rem; } } @media (max-width: 576px) { .font-resp-xs-0p2 { font-size: 0.2rem; } .font-resp-xs-0p3 { font-size: 0.3rem; } .font-resp-xs-0p4 { font-size: 0.4rem; } .font-resp-xs-0p5 { font-size: 0.5rem; } .font-resp-xs-0p6 { font-size: 0.6rem; } .font-resp-xs-0p7 { font-size: 0.7rem; } .font-resp-xs-0p8 { font-size: 0.8rem; } .font-resp-xs-0p9 { font-size: 0.9rem; } } </style>
+		<style type="text/css">﻿ html, body { font-size: 15px; } h1 { font-size: 2.4rem; font-weight: 400; color: rgb(23, 54, 93); } h2 { font-size: 2rem; font-weight: 400; color: rgb(79, 129, 189); } h3 { font-size: 1.5rem; font-weight: 400; color: rgb(79, 129, 189); } h4 { font-size: 1.2rem; color: rgb(36, 63, 96); font-weight: 500; } h5 { font-size: 1.05rem; font-weight: 500; font-style: italic; color: rgb(45, 45, 45); } .mechanicalc-brand { font-family: 'Cambria Math', Cambria, 'Times New Roman', serif; } figcaption { font-size: 0.8rem; } ul.lst-tight { padding-left: 1.25rem; } .alert-info { background-color: #ffd199; color: #4d2a00; } .alert-close { color: #4d2a00; } .alert-close:hover { color: white; } .btn-primary { background-color: #007bff; } .btn-primary:hover, .btn-primary:focus { background-color: #0069d9; } .btn-info { background-color: #5bc0de; } .btn-info:hover, .btn-info:focus { background-color: #41b5d8; } nav.navbar { padding: 0 2rem; background-color: #333333; } nav.navbar a { padding: 0.75rem 15px; } nav.navbar a:hover { background-color: black; } @media (max-width: 992px) { nav.navbar { padding-left: 0; padding-right: 0; } } nav.navbar .nav-toggler a { font-size: 16px; padding-top: 11px; } nav.navbar a.nav-accent { color: white; background-color: #006fe6; } nav.navbar a.nav-accent:hover { color: white; background-color: #0056b3; } .hero .hero-container { padding: 0; } @media (min-width: 768px) { .hero .hero-container { padding: 0 2rem; } } .info-card .card-header { background-color: #ffd199; } .info-card .card-content { background-color: bisque; } .newsletter-card { margin-bottom: 1rem; } .newsletter-card .card-header { background-color: #d6e4f5; padding: 0.5rem 1rem; font-weight: bold; } .newsletter-card .card-content { background-color: #ebf2fa; padding: 0.5rem 1rem; } .ref-card { margin-bottom: 1.25rem; } .ref-card .card-header { background-color: #f1f1f1; } .ref-card .card-content { background-color: #f5f5f5; padding: 0.5rem 1rem 0.6rem 1rem; } .feedback-card { margin-top: 2rem; } .feedback-card .card-header { background-color: #f1f1f1; } .feedback-card .card-content { background-color: #f5f5f5; padding: 0.5rem 1rem; } .ads-card { margin-bottom: 1rem; margin-top: 1rem; background-color: bisque; } .ads-card.ads-main-body { margin-top: 0; } .ads-card .card-header { background-color: #ffd199; padding: 0.5rem 1rem; font-weight: bold; } .ads-card .card-header h5 { font-style: normal; } .ads-card .card-content { padding: 0.5rem 1rem; } .ads-card .card-content h3 { margin-top: 0.3rem; } .ads-card h2, .ads-card h3, .ads-card h4, .ads-card h5 { font-family: "Segoe UI", "Trebuchet MS", Verdana, sans-serif; } .calc-side-card { margin: 0.7rem 0; background-color: #f5f5f5; } .calc-side-card .card-header { background-color: #f1f1f1; padding: 0.5rem 1rem; } .calc-side-card .card-header h5 { font-style: normal; } .calc-side-card .card-content { padding: 0.375rem 1rem; } .relatedPages-card { margin-bottom: 1rem; margin-top: 1rem; } .relatedPages-card .card-header { background-color: #ccffcc; padding: 0.5rem 1rem; font-weight: bold; } .relatedPages-card .card-content { background-color: #ccffcc; padding: 0.5rem 1rem; } .relatedPages-card.related-main-body .card-content { padding-top: 0.8rem; padding-bottom: 0.8rem; } .relatedPages-card .card-content ul { padding-left: 1.25rem; } .books-card { margin-bottom: 1rem; margin-top: 1rem; } .books-card .card-header { background-color: #f1f1f1; padding: 0.5rem 1rem; font-weight: bold; } .books-card .card-content { background-color: #f5f5f5; padding: 0.5rem 1rem; } .pdh-classroom-ad-container { margin: 1rem 0; } .container { padding: 0 1rem; } @media (min-width: 768px) { .container { padding: 0 3rem; } } table td.listCol { padding-left: 2rem; padding-right: 0; padding-top: 0; font-size: large; } @media (min-width: 576px) { .col-table-resp { padding: 0 30px; } } @media (min-width: 768px) { .col-table-resp { padding: 0 45px; } } </style>
+
+		
+
+		<style>
+
+			/* Sizing for right sidebar: */
+			@media (min-width: 1200px) {
+				.sidebar-right {
+					width: 330px;
+					padding: 0 0.88rem;
+				}
+				/* If we have a right-sidebar, update the margin on the internal content section: */
+				.sidebar-right ~ .sb-content {
+					margin-right: 330px;
+				}
+				footer.foot-sticky > .container.right-sidebar-exists {
+					padding-right: 330px;
+				}
+			}
+
+			/* If we have sidebars, make the container margins smaller to give the body more room: */
+			
+				@media (min-width: 768px) and (max-width: 1400px) {
+					.container {
+						padding: 0 1.5rem;
+					}
+					nav.navbar {
+						padding-left: 0.6rem;
+					}
+				}
+			
+		</style>
+		
+		<!-- Page-specific CSS with high precedence: -->
+		
+	
+		<style> .priceContainer { width: 100%; } .priceContainer .priceColumn { float: left; width: 20%; padding: 0px 8px 0px 8px; margin-bottom: 20px; } .priceContainer .headDiv { padding: 15px 0px 15px 0px; } .priceContainer .headerTier .headDiv:hover { background-color: #163550; } .priceContainer .header { list-style-type: none; border-bottom: none; margin: 0; font-size: 20px; font-weight: 400; padding: 0px; text-align: center; } .priceContainer .priceList { list-style-type: none; border: 1px solid DarkGray; margin: 0; padding: 0; } .priceContainer .priceList li { border-bottom: 1px solid #bfbfbf; padding: 4px; } .priceContainer .priceList li:last-child { border-bottom: none; } .priceContainer .priceList li:nth-child(2n) { background-color: rgb(246,246,246); } .priceContainer .descList li { text-align: left; font-weight: bold; padding-left: 10px; } .priceContainer .tierList li { text-align: center; } .priceContainer .header a { color: white; } .priceContainer .headerTier1 { background-color: #b3b3b3; } .priceContainer .headerTier2 { background-color: #428bca; } .priceContainer .headerTier3 { background-color: #2E6EA2; } .priceContainer .headerTier4 { background-color: #275d8b; } .priceContainer .priceList .priceRow { height: 54px; } .priceContainer .priceList .priceCell { font-weight: bold; } .priceContainer li.buyBtnCell { padding-top: 10px; padding-bottom: 10px; background-color: white; } .priceContainer li.buyBtnCell a { width: 125px; height: 45px; padding-top: 12px; border: none; } .priceContainer li.buyBtnCell a:hover { background-color: #163550; } .priceContainer li.btnTier2 a { background-color: #428bca; } .priceContainer li.btnTier3 a { background-color: #2E6EA2; } .priceContainer li.btnTier4 a { background-color: #275d8b; } .priceContainer .checkMark { color: seagreen; font-size: 1.1rem; } .priceContainer .xMark { color: firebrick; font-size: 1.1rem; } .priceContainer .textWide { display:inherit; } .priceContainer .textNarrow { display: none; } @media (max-width:992px) { .priceContainer .descColumn { display: none; } .priceContainer .priceColumn { width: 32%; } .priceContainer .textWide { display:none; } .priceContainer .textNarrow { display: inherit; } } @media (max-width:760px) { .priceContainer .priceColumn { width: 100%; } } .priceAfter { clear: left; } </style>
+	
+
+
+		<!-- JS for specific pages: -->
+		
+	<script>
+		resourceLoader.defineJS('calc', "/static/js/Calculators/StressStrainCurve/stressStrainCurve-07.min.js", ['bearFight', 'refLib']);
+		resourceLoader.importJS(['refLib', 'calc']);
+	</script>
+
+				
+		
+		<script>
+			// Globally available functions
+
+			// Return whether the user is logged in:
+			function userLoggedIn() {
+				var auth = String('False');
+				return (auth == 'True');
+			}
+
+			// Return dates when server data was last updated:
+			function getDate_MatLastUpdate() {  // materials
+				return String('8/7/2024');
+			}
+			function getDate_FracMatLastUpdate() {  // fracture materials
+				return String('8/7/2024');
+			}			
+			function getDate_CrsSectLastUpdate() {  // cross sections
+				return String('8/7/2024');
+			}
+			
+		</script>
+		
+
+		<!-- Put other head stuff that you need for specific pages here: -->
+		
+		
+	<script type="text/javascript" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/bearFight-01h.min.js.download"></script><script type="text/javascript" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/refLib-MC-53-03.min.js.download"></script><script type="text/javascript" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/stressStrainCurve-07.min.js.download"></script><style>#gridStressStrainPts td:nth-child(1), #gridStressStrainPts th:nth-child(1) { max-width: 30px; min-width: 30px } #gridStressStrainPts td:nth-child(2), #gridStressStrainPts th:nth-child(2) { max-width: 325.35px; min-width: 325.35px } #gridStressStrainPts td:nth-child(3), #gridStressStrainPts th:nth-child(3) { max-width: 397.65px; min-width: 397.65px } </style><style></style></head>
+	
+	<body style="margin-bottom: 85px;">
+		
+		<nav class="navbar nav-fixed">
+			<div class="nav-brand">
+				<a href="https://mechanicalc.com/">
+					<span class="mechanicalc-brand" style="font-size: 18px; line-height: 1;">
+						MechaniCalc
+					</span>
+				</a>
+			</div>
+			<div class="nav-collapse">
+
+				<div class="nav-dropdown">
+					<a href="https://mechanicalc.com/pricing">
+						<i class="fa fa-credit-card"></i>
+						<span>Pricing</span>
+					</a>
+					<div class="nav-dropdown-content">
+						<a href="https://mechanicalc.com/pricing">Pricing Overview</a>
+						<a href="https://mechanicalc.com/individual-subscription">Individual Subscription</a>
+						<a href="https://mechanicalc.com/group-subscription">Group Subscription</a>
+						<a href="https://mechanicalc.com/classroom-subscription">Classroom Subscription</a>
+						<a href="https://mechanicalc.com/free-use">Limited Free Use</a>
+					</div>
+				</div>
+
+				<div class="nav-dropdown">
+					<a href="https://mechanicalc.com/calculators/">
+						<i class="fa fa-calculator"></i>
+						<span>Calculators</span>
+					</a>
+					<div class="nav-dropdown-content">
+						<a href="https://mechanicalc.com/calculators/" style="font-weight:bold; color:#428bca;">Complete Listing</a>
+						<div class="nav-dropdown-divider"></div>
+						<a href="https://mechanicalc.com/calculators/beam-analysis/">Beam Analysis</a>
+						<a href="https://mechanicalc.com/calculators/finite-element-analysis/">2D Finite Element Analysis (FEA)</a>
+						<a href="https://mechanicalc.com/calculators/bolted-joint-analysis/">Bolted Joint Analysis</a>
+						<a href="https://mechanicalc.com/calculators/bolt-pattern-force-distribution/">Bolt Pattern Force Distribution</a>
+						<a href="https://mechanicalc.com/calculators/lifting-lug-analysis/">Lug Analysis</a>
+						<a href="https://mechanicalc.com/calculators/column-buckling/">Column Buckling</a>
+						<a href="https://mechanicalc.com/calculators/fracture-mechanics/">Fracture Mechanics</a>
+						<a href="https://mechanicalc.com/calculators/fatigue-crack-growth/">Fatigue Crack Growth</a>
+						<a href="https://mechanicalc.com/calculators/material-stress-strain-curve/">Stress-Strain Curve</a>
+						<a href="https://mechanicalc.com/calculators/cross-section-builder/">Cross Section Builder</a>
+						<a href="https://mechanicalc.com/calculators/mohrs-circle/">Mohr's Circle</a>
+						<a href="https://mechanicalc.com/calculators/stress-concentration/">Stress Concentration</a>
+						<a href="https://mechanicalc.com/calculators/unit-conversion/">Unit Conversion</a>
+					</div>
+				</div>
+
+				<div class="nav-dropdown">
+					<a href="https://mechanicalc.com/calculators/materials/">
+						<i class="fa fa-sliders"></i>
+						
+						<span class="hidden-md hidden-lg">Physical Properties</span>
+						<span class="hidden-xs hidden-sm hidden-md hidden-xl">Physical Props</span>
+						<span class="hidden-xs hidden-sm hidden-lg hidden-xl">Phys</span>
+					</a>
+					<div class="nav-dropdown-content">
+						<a href="https://mechanicalc.com/calculators/materials/">Materials</a>
+						<a href="https://mechanicalc.com/calculators/fracture-materials/">Fracture Materials</a>
+						<a href="https://mechanicalc.com/calculators/cross-sections/">Cross Sections</a>
+					</div>
+				</div>
+
+				<div class="nav-dropdown">
+					<a href="https://mechanicalc.com/reference/">
+						<i class="fa fa-book"></i>
+						<span class="hidden-md hidden-lg">Reference</span>
+						<span class="hidden-xs hidden-sm hidden-xl">Ref</span>
+					</a>
+					<div class="nav-dropdown-content">
+						<a href="https://mechanicalc.com/reference/" style="font-weight:bold; color:#428bca;">Complete Listing</a>
+						<div class="nav-dropdown-divider"></div>
+						<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials">Mechanical Properties of Materials</a>
+						<a href="https://mechanicalc.com/reference/engineering-materials">Engineering Materials</a>
+						<a href="https://mechanicalc.com/reference/cross-sections">Cross Sections</a>
+						<a href="https://mechanicalc.com/reference/strength-of-materials">Strength of Materials</a>
+						<a href="https://mechanicalc.com/reference/beam-analysis">Beam Stress &amp; Deflection</a>
+						<a href="https://mechanicalc.com/reference/bolted-joint-analysis">Bolted Joint Analysis</a>
+						<a href="https://mechanicalc.com/reference/bolt-pattern-force-distribution">Bolt Pattern Force Distribution</a>
+						<a href="https://mechanicalc.com/reference/lug-analysis">Lug Analysis</a>
+						<a href="https://mechanicalc.com/reference/column-buckling">Column Buckling</a>
+						<a href="https://mechanicalc.com/reference/fracture-mechanics">Fracture Mechanics</a>
+						<a href="https://mechanicalc.com/reference/fatigue-crack-growth">Fatigue Crack Growth</a>
+					</div>
+				</div>
+
+				<div class="nav-dropdown hidden-md">
+					<a href="https://mechanicalc.com/posts/">
+						<i class="fa fa-file"></i>
+						<span>Posts</span>
+					</a>
+					<div class="nav-dropdown-content">
+						<a href="https://mechanicalc.com/posts/" style="font-weight:bold; color:#428bca;">Complete Listing</a>
+						<div class="nav-dropdown-divider"></div>
+						<a href="https://mechanicalc.com/posts/resources-for-mechanical-engineers">Recommended Textbooks</a>
+						<a href="https://mechanicalc.com/posts/passing-the-pe-exam">Passing the PE Exam</a>
+						<a href="https://mechanicalc.com/posts/overview-of-mechanical-engineering">Overview of Mechanical Engineering</a>
+						<a href="https://mechanicalc.com/posts/mechanical-engineering-skills">Skills of a Mechanical Engineer</a>
+						<a href="https://mechanicalc.com/posts/software-for-mechanical-engineers">Software for Mechanical Engineers</a>
+						<a href="https://mechanicalc.com/posts/gadgets-for-mechanical-engineers">Useful Gadgets</a>
+					</div>
+				</div>
+
+				<div class="nav-dropdown">
+					<a href="https://mechanicalc.com/frequently-asked-questions">
+						<i class="fa fa-user"></i>
+						<span>Support</span>
+					</a>
+					<div class="nav-dropdown-content">
+						<a href="https://mechanicalc.com/frequently-asked-questions">Frequently Asked Questions</a>
+						<a href="https://mechanicalc.com/contact">Contact Us</a>
+						<a href="https://mechanicalc.com/about">About Us</a>
+						<a href="https://engineeringlibrary.org/">Engineering Library</a>
+						<a href="https://mechanicalc.com/policies/terms_and_conditions">Terms &amp; Conditions</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-collapse nav-right">
+				
+					<a href="https://mechanicalc.com/auth/login">Log In</a>
+					<a href="https://mechanicalc.com/auth/register-individual" class="nav-accent">Sign Up</a>
+				
+			</div>
+
+			<div class="nav-toggler nav-right">  <!-- hamburger menu -->
+				<a href="https://mechanicalc.com/calculators/material-stress-strain-curve/#">
+					☰  <!-- hamburger icon -->
+				</a>
+			</div>
+		</nav>
+
+		
+		<!-- Page Content: -->
+		<div class="sb-content-container page-body">
+
+			
+
+			
+				<div class="sidebar sidebar-right sidebar-fixed" style="overflow-y: auto;">
+					
+
+	
+<div class="card calc-side-card" style="margin-top: 1rem;">
+	<div class="card-header">
+		<h4>
+			<a href="https://mechanicalc.com/calculators/">Need Other Calculators?</a>
+		</h4>
+	</div>
+	<div class="card-content">
+		<p>Below are just a few of <a href="https://mechanicalc.com/calculators/">our calculators</a>.</p>
+	</div>
+</div>
+
+	<div id="div_materials_sb" style="display: inherit; visibility: visible;">
+		
+<div class="card calc-side-card" style="min-height: 201px;">
+	<div class="card-header">
+		<h5>
+			<a href="https://mechanicalc.com/calculators/materials/">Materials Database</a>
+		</h5>
+	</div>
+	<div class="card-content">
+		<div class="text-center">
+			<a href="https://mechanicalc.com/calculators/materials/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/materials-database-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/materials-database-01.png" alt="Materials Database">
+				</picture>
+			</a>
+		</div>
+	</div>
+</div>
+	</div>
+
+	<div id="div_beam_sb" style="display: inherit; visibility: visible;">
+		
+<div class="card calc-side-card" style="min-height: 161px;">
+	<div class="card-header">
+		<h5>
+			<a href="https://mechanicalc.com/calculators/beam-analysis/">Beam Calculator</a>
+		</h5>
+	</div>
+	<div class="card-content">
+		<div class="text-center" style="margin-left: -1rem; margin-right: -1rem;">
+			<a href="https://mechanicalc.com/calculators/beam-analysis/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/beam-calculator-small-ad-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/beam-calculator-small-ad-01.png" alt="Beam Calculator">
+				</picture>
+			</a>
+		</div>
+	</div>
+</div>
+	</div>
+
+	<div id="div_bolt_sb" style="display: none; visibility: hidden;">
+		
+<div class="card calc-side-card" style="min-height: 192px;">
+	<div class="card-header">
+		<h5>
+			<a href="https://mechanicalc.com/calculators/bolted-joint-analysis/">Bolted Joint Calculator</a>
+		</h5>
+	</div>
+	<div class="card-content">
+		<div class="text-center">
+			<a href="https://mechanicalc.com/calculators/bolted-joint-analysis/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/bolt-calculator-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/bolt-calculator-01.png" alt="Bolted Joint Calculator">
+				</picture>
+			</a>
+		</div>
+	</div>
+</div>
+	</div>
+
+	<div id="div_lug_sb" style="display: none; visibility: hidden;">
+		
+<div class="card calc-side-card" style="min-height: 201px;">
+	<div class="card-header">
+		<h5>
+			<a href="https://mechanicalc.com/calculators/lifting-lug-analysis/">Lug Calculator</a>
+		</h5>
+	</div>
+	<div class="card-content">
+		<div class="text-center">
+			<a href="https://mechanicalc.com/calculators/lifting-lug-analysis/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/lug-calculator-small-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/lug-calculator-small-01.png" alt="Lug Calculator">
+				</picture>
+			</a>
+		</div>
+	</div>
+</div>
+	</div>
+
+	<div id="div_fea_sb" style="display: none; visibility: hidden;">
+		
+<div class="card calc-side-card" style="min-height: 187px;">
+	<div class="card-header">
+		<h5>
+			<a href="https://mechanicalc.com/calculators/finite-element-analysis/">2D Finite Element Analysis</a>
+		</h5>
+	</div>
+	<div class="card-content">
+		<div class="text-center">
+			<a href="https://mechanicalc.com/calculators/finite-element-analysis/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/calculator-advertisement-small-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/calculator-advertisement-small-01.png" alt="Structural Calculators">
+				</picture>
+			</a>
+		</div>
+	</div>
+</div>
+	</div>	
+	
+	<script>
+		resourceLoader.subscribeOnLoadedJS(['bearFight'], function () {
+			BF.Sidebar.showMaybe(['div_materials_sb'], 'right');
+			BF.Sidebar.showMaybe(['div_beam_sb'], 'right');
+			BF.Sidebar.showMaybe(['div_bolt_sb'], 'right');
+			BF.Sidebar.showMaybe(['div_lug_sb'], 'right');
+			BF.Sidebar.showMaybe(['div_fea_sb'], 'right');
+		});
+	</script>
+
+
+				</div>
+			
+			
+			<main class="sb-content">
+				<div class="container">
+
+					
+
+
+					
+
+	<!-- Header (with links to the right): -->
+	<div class="row page-header">
+
+		<div class="col-md-10">
+			<h1>Material Stress-Strain Curve</h1>
+		</div>
+
+		<!-- Links to the right: -->
+		<div class="col-md-2 text-right">
+			<a class="btn btn-info" style="margin-top:20px;" href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-approx">
+				Reference
+			</a>			
+		</div>
+	</div>
+
+	
+<noscript>
+	<p style="color:crimson">
+		NOTE: This page relies on JavaScript to process and format results.  Please enable JavaScript.
+	</p>
+	<hr />
+</noscript>
+
+	<div id="mainView">
+
+		<p>
+			The Stress-Strain Curve calculator allows for the calculation of the engineering stress-strain curve of a material using the Ramberg-Osgood equation.  See the <a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-approx">reference section</a> for details on the methodology and the equations used.
+		</p>
+		<hr>
+
+		<div class="row">
+
+			<div class="col-md-5">
+				<h3 style="margin-top:5px;">
+					Material Property Inputs
+				</h3>
+				
+				<p>
+					Enter the material properties in either US or SI units:
+				</p>
+
+				<!-- Yield Strength -->
+				<div class="row form-group">
+					<div class="col-xs-5 text-right text-nowrap">
+						<label class="tooltip-bump-right-1" tooltip-position="bottom" tooltip="This is the yield strength of the material.">
+							<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-curve">Yield Strength:</a>
+						</label>
+					</div>
+					<div class="col-xs-7">
+						<input type="text" id="txtYieldStr" tabindex="1" placeholder="i.e. 30 ksi, 200 MPa, etc.">
+					<div id="warnDiv_txtYieldStr_autoGen"></div></div>
+				</div>
+
+				<!-- Ultimate Strength -->
+				<div class="row form-group">
+					<div class="col-xs-5 text-right text-nowrap">
+						<label class="tooltip-bump-right-1" tooltip-position="bottom" tooltip="This is the ultimate strength of the material.">
+							<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-curve">Ultimate Strength:</a>
+						</label>
+					</div>
+					<div class="col-xs-7">
+						<input type="text" id="txtUltStr" tabindex="2" placeholder="i.e. 30 ksi, 200 MPa, etc.">
+					<div id="warnDiv_txtUltStr_autoGen"></div></div>
+				</div>
+
+				<!-- Elastic Modulus -->
+				<div class="row form-group">
+					<div class="col-xs-5 text-right text-nowrap">
+						<label class="tooltip-bump-right-1" tooltip-position="bottom" tooltip="This is the elastic modulus of the material (also called Young&#39;s modulus).">
+							<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#hookes-law">Elastic Modulus:</a>
+						</label>
+					</div>
+					<div class="col-xs-7">
+						<input type="text" id="txtElasticMod" tabindex="3" placeholder="i.e. 30e6 psi, 200 GPa, etc.">
+					<div id="warnDiv_txtElasticMod_autoGen"></div></div>
+				</div>
+
+				<!-- Elongation -->
+				<div class="row form-group">
+					<div class="col-xs-5 text-right text-nowrap">
+						<label class="tooltip-bump-right-1" tooltip-position="bottom" tooltip="This is the percent elongation of the material, which accounts for the plastic strain at failure in the axial direction. Commonly provided in the material specification.">
+							<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#ductility">% Elongation:</a>
+						</label>
+					</div>
+					<div class="col-xs-7">
+						<div id="lblLogin_pctElong" style="display: inherit;">
+							<span style="color:crimson;">Please log in to enable:</span>
+						</div>
+						<input type="text" id="txtPctElong" tabindex="4" placeholder="i.e. 10%, 0.10, etc." disabled="">
+					<div id="warnDiv_txtPctElong_autoGen"></div></div>
+				</div>
+
+				<!-- Warnings: -->
+				<div id="divWarn" class="row form-group" style="display:none;">
+					<div class="col-xs-12">
+						<p id="txtWarn" class="form-plaintext" style="color:crimson; padding-left:10px; border-width:2px; border-style:dashed; border-color:crimson;"></p>
+					</div>
+				</div>
+
+
+				<h3 style="margin-top:30px;">
+					Points for Stress-Strain Curve
+				</h3>
+
+				<p>
+					The points for the <i>engineering stress-strain curve</i> are shown below:
+				</p>
+
+				<table id="gridStressStrainPts" class="grid-table margin-bot-1" tabindex="-1"><thead><tr><th>#</th><th>Strain</th><th>Stress [psi]</th></tr></thead><tbody class="" style="height: 245px;"><tr><td>1</td><td>0.0000000</td><td>0.0000</td></tr><tr><td>2</td><td>0.0002500</td><td>7,000.0</td></tr><tr><td>3</td><td>0.0005000</td><td>14,000</td></tr><tr><td>4</td><td>0.0007500</td><td>21,000</td></tr><tr><td>5</td><td>0.0010000</td><td>28,000</td></tr><tr><td>6</td><td>0.0012500</td><td>35,000</td></tr><tr><td>7</td><td>0.0015007</td><td>42,000</td></tr><tr><td>8</td><td>0.0017578</td><td>49,000</td></tr><tr><td>9</td><td>0.0020620</td><td>56,000</td></tr><tr><td>10</td><td>0.0026379</td><td>63,000</td></tr><tr><td>11</td><td>0.0026379</td><td>63,000</td></tr><tr><td>12</td><td>0.0027346</td><td>63,692</td></tr><tr><td>13</td><td>0.0028436</td><td>64,385</td></tr><tr><td>14</td><td>0.0029669</td><td>65,077</td></tr><tr><td>15</td><td>0.0031067</td><td>65,769</td></tr><tr><td>16</td><td>0.0032656</td><td>66,462</td></tr><tr class=" selected"><td>17</td><td>0.0034465</td><td>67,154</td></tr><tr><td>18</td><td>0.0036526</td><td>67,846</td></tr><tr><td>19</td><td>0.0038879</td><td>68,538</td></tr><tr><td>20</td><td>0.0041565</td><td>69,231</td></tr><tr><td>21</td><td>0.0044633</td><td>69,923</td></tr><tr><td>22</td><td>0.0048139</td><td>70,615</td></tr><tr><td>23</td><td>0.0052145</td><td>71,308</td></tr><tr><td>24</td><td>0.0056722</td><td>72,000</td></tr><tr><td>25</td><td>0.0061950</td><td>72,692</td></tr><tr><td>26</td><td>0.0067919</td><td>73,385</td></tr><tr><td>27</td><td>0.0074731</td><td>74,077</td></tr><tr><td>28</td><td>0.0082500</td><td>74,769</td></tr><tr><td>29</td><td>0.0091356</td><td>75,462</td></tr><tr><td>30</td><td>0.0101441</td><td>76,154</td></tr><tr><td>31</td><td>0.0112920</td><td>76,846</td></tr><tr><td>32</td><td>0.0125973</td><td>77,538</td></tr><tr><td>33</td><td>0.0140805</td><td>78,231</td></tr><tr><td>34</td><td>0.0157643</td><td>78,923</td></tr><tr><td>35</td><td>0.0176743</td><td>79,615</td></tr><tr><td>36</td><td>0.0198388</td><td>80,308</td></tr><tr><td>37</td><td>0.0222895</td><td>81,000</td></tr><tr><td>38</td><td>0.0250619</td><td>81,692</td></tr><tr><td>39</td><td>0.0281953</td><td>82,385</td></tr><tr><td>40</td><td>0.0317334</td><td>83,077</td></tr><tr><td>41</td><td>0.0357249</td><td>83,769</td></tr><tr><td>42</td><td>0.0402238</td><td>84,462</td></tr><tr><td>43</td><td>0.0452900</td><td>85,154</td></tr><tr><td>44</td><td>0.0509901</td><td>85,846</td></tr><tr><td>45</td><td>0.0573975</td><td>86,538</td></tr><tr><td>46</td><td>0.0645937</td><td>87,231</td></tr><tr><td>47</td><td>0.0726688</td><td>87,923</td></tr><tr><td>48</td><td>0.0817221</td><td>88,615</td></tr><tr><td>49</td><td>0.0918636</td><td>89,308</td></tr><tr><td>50</td><td>0.1032143</td><td>90,000</td></tr></tbody><tfoot style="display: none;"><tr><td><div style="width: 75%; text-align: left;">&nbsp;</div><div style="width: 25%; text-align: right;">&nbsp;</div></td></tr></tfoot></table>
+				
+				<!-- Print to Excel: -->
+				<div class="row-table">
+					<div class="col-table">
+						<button type="button" id="btnPrintToExcel" class="btn btn-primary">Download To Excel</button>
+					</div>
+					<div class="col-table">
+						<p id="spnPrintMsg" class="form-plaintext" style="color:crimson;"></p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-7">
+				
+				<!-- Display Units: -->
+				<div class="row-table form-group" style="margin-top:0px; margin-bottom:0px;">
+					<div class="col-table">
+						<p class="form-plaintext"><b>Display Units:</b></p>
+					</div>
+					<div class="col-table" id="unitRdo-custom" style="">
+						<label class="radio form-full-pad">
+							<span tooltip-position="bottom" tooltip="Custom units (edit within your Preferences page)">
+								<input type="radio" name="unitRadioDB" id="unitRadioCustom" value="1">Custom (<a href="https://mechanicalc.com/auth/preferences">Edit</a>)
+							</span>
+						</label>
+					</div>
+					<div class="col-table" id="unitRdo-english" style="">
+						<label class="radio form-full-pad">
+							<span tooltip-position="bottom" tooltip="US Customary units">
+								<input type="radio" name="unitRadioDB" id="unitRadioEnglish" value="2">US
+							</span>
+						</label>
+					</div>
+					<div class="col-table" id="unitRdo-SI" style="">
+						<label class="radio form-full-pad">
+							<span tooltip-position="bottom" tooltip="Metric (SI) units">
+								<input type="radio" name="unitRadioDB" id="unitRadioSI" value="3">SI
+							</span>
+						</label>
+					</div>
+				</div>
+				
+				<!-- Canvas: -->
+				<div id="divCanvas" style="display:inherit;">
+					<div id="canvasStressStrain" class="card" style="height:480px; margin-top:5px; margin-bottom:15px;">
+						<canvas id="canvas" height="480" width="1085">Cannot display plot -- browser is out of date.</canvas>
+					</div>
+				</div>
+
+
+				<!-- Failure Properties Table: -->																												
+				
+				<table class="tbl-border-all tbl-pad-vert-ss tbl-gap-col-3">
+					<tbody><tr>
+						<th colspan="2">Yield Point</th>
+						<th class="gap-col"></th>
+						<th colspan="2">Ultimate Point</th>
+					</tr>
+					<tr>
+						<td>
+							<span tooltip-position="bottom" tooltip="This is the yield strength of the material.">
+								<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-curve">Yield Strength</a>:
+							</span>
+						</td>
+						<td> <span class="engYieldStr">70,000&nbsp;psi</span></td>
+
+						<td></td>
+
+						<td>
+							<span tooltip-position="bottom" tooltip="This is the ultimate strength of the material (also called tensile strength).">
+								<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-curve">Ultimate Strength</a>:
+							</span>
+						</td>
+						<td> <span class="engUltStr">90,000&nbsp;psi</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span tooltip-position="bottom" tooltip="The yield strain is the total strain at yield, and includes both the elastic and plastic components of the strain.  The material is assumed to have 0.2% plastic strain at yield.">
+								<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#ductility">Yield Strain</a>:
+							</span>
+						</td>
+						<td> <span class="engStrainAtYield">0.004500</span> </td>
+
+						<td></td>
+
+						<td>
+							<span tooltip-position="bottom" tooltip="The ultimate strain is the total strain at failure, and includes both the elastic and plastic components of the strain.">
+								<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#ductility">Ultimate Strain</a>:
+							</span>
+						</td>
+						<td> <span class="engStrainUltimate">0.1032</span> </td>
+					</tr>
+				</tbody></table>
+				
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<h3 style="margin-top:30px;">
+					Ramberg-Osgood Equation
+				</h3>
+
+				<p>
+					The <a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-curve">stress-strain curve</a> is approximated using the <a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-approx">Ramberg-Osgood equation</a>, which calculates the total strain (<a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#elastic-plastic-strain">elastic and plastic</a>) as a function of <a href="https://mechanicalc.com/reference/strength-of-materials#stress-and-strain">stress</a>:
+				</p>
+				<figure>
+					
+					<img style="max-width:100%;" src="data:image/png;base64,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">
+				</figure>
+	
+				<p>
+					where <span class="math-font">σ</span> is the value of stress, <span class="math-font">E</span> is the elastic modulus of the material, <span class="math-font">S<sub>ty</sub></span> is the tensile yield strength of the material, and <span class="math-font">n</span> is the strain hardening exponent of the material which can be calculated based on the provided inputs.
+				</p>
+				
+				<p>
+					Based on the specified material properties, the value of the strain hardening exponent, <span class="math-font">n</span>, is:
+				</p>
+				<table class="tbl-border-none tbl-center tbl-pad-vert-none tbl-pad-horiz-ss">
+					<tbody><tr>
+						<td><span class="math-font">n</span>&nbsp; =</td>
+						<td> <span class="mat_n">0.06424</span> </td>
+						<td class="pad-left-2">strain hardening exponent</td>
+					</tr>
+				</tbody></table>
+				
+
+				<h3 style="margin-top:30px;">
+					Strain Values at Yield and Ultimate Strength Points
+				</h3>
+
+				<div class="row">
+					<div class="col-md-9">
+
+						<p>
+							The strain value associated with the yield strength is:
+						</p>
+
+						<table class="tbl-border-none tbl-center tbl-vert-align-middle tbl-pad-vert-md tbl-pad-horiz-ss">
+							<tbody><tr>
+								<td>
+									<figure>
+										
+										<img style="max-width:100%;" src="data:image/png;base64,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">
+									</figure>
+								</td>
+								<td> <span class="engStrainAtYield">0.004500</span> </td>
+							</tr>
+						</tbody></table>
+
+					</div>
+
+					<div class="col-md-3">
+						
+						<div class="card ref-card">
+							<div class="card-content">
+								<p><i><u>Reference Values</u></i></p>
+							
+								<table class="tbl-border-none tbl-pad-vert-none tbl-pad-horiz-ss">
+									<tbody><tr>
+										<td><span class="math-font">S<sub>ty</sub></span></td>
+										<td>=</td>
+										<td> <span class="engYieldStr">70,000&nbsp;psi</span> </td>
+									</tr>
+									<tr>
+										<td><span class="math-font">E</span></td>
+										<td>=</td>
+										<td> <span class="elasticMod">28.00E6&nbsp;psi</span> </td>
+									</tr>
+								</tbody></table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Note that a plastic strain of 0.002 is assumed.  This is consistent with the 0.2% offset method, <a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#stress-strain-curve">as described here</a>.
+				</p>
+
+
+				<div class="row">
+					<div class="col-md-9">
+
+						<p>
+							The strain value associated with the ultimate strength is:
+						</p>
+
+						<table class="tbl-border-none tbl-center tbl-vert-align-middle tbl-pad-vert-md tbl-pad-horiz-ss">
+							<tbody><tr>
+								<td>
+									<figure>
+										
+										<img style="max-width:100%;" src="data:image/png;base64,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">
+									</figure>
+								</td>
+								<td> <span class="engStrainUltimate">0.1032</span> </td>
+							</tr>
+						</tbody></table>
+
+					</div>
+
+					<div class="col-md-3">
+
+						<div class="card ref-card">
+							<div class="card-content">
+								<p><i><u>Reference Values</u></i></p>
+							
+								<table class="tbl-border-none tbl-pad-vert-none tbl-pad-horiz-ss">
+									<tbody><tr>
+										<td><span class="math-font">S<sub>ty</sub></span></td>
+										<td>=</td>
+										<td> <span class="engUltStr">90,000&nbsp;psi</span> </td>
+									</tr>
+									<tr>
+										<td><span class="math-font">E</span></td>
+										<td>=</td>
+										<td> <span class="elasticMod">28.00E6&nbsp;psi</span> </td>
+									</tr>
+									<tr>
+										<td><span class="math-font">ε<sub>f</sub></span></td>
+										<td>=</td>
+										<td> <span class="pctElong">0.1</span> </td>
+									</tr>
+								</tbody></table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				
+				<div class="row">
+					<div class="col-md-9">
+
+						<p>
+							where <span class="math-font">ε<sub>f</sub></span> is the <a href="https://mechanicalc.com/reference/mechanical-properties-of-materials#ductility">plastic strain at failure</a> and is simply the  percent elongation expressed in decimal form:
+						</p>
+
+						<table class="tbl-border-none tbl-center tbl-vert-align-middle tbl-pad-vert-md tbl-pad-horiz-ss">
+							<tbody><tr>
+								<td>
+									<span class="math-font">ε<sub>f</sub> = eL / 100% =</span>
+								</td>
+								<td> <span class="pctElong">0.1</span> </td>
+							</tr>
+						</tbody></table>
+
+					</div>
+
+					<div class="col-md-3">
+
+						<div class="card ref-card">
+							<div class="card-content">
+								<p><i><u>Reference Values</u></i></p>
+							
+								<table class="tbl-border-none tbl-pad-vert-none tbl-pad-horiz-ss">
+									<tbody><tr>
+										<td><span class="math-font">eL</span></td>
+										<td>=</td>
+										<td> <span class="pctElong_Pct">10%</span> </td>
+									</tr>
+								</tbody></table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+		
+		<hr>
+	</div>
+	
+	
+	<!-- ================================================================== -->
+	
+	<!-- Pricing -->
+	
+		
+<div class="row">
+	<div class="col-sm-12">
+		<h2>Need More Functionality?</h2>
+
+		<p>
+			Sign up for an account to receive <b>full access to all calculators</b> and other content.  The subscription types are described below, along with the benefits of each.
+		</p>
+		
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		
+
+<div class="priceContainer">
+
+	<div class="priceColumn descColumn">
+		
+		<ul class="header">
+			<li>
+				<div class="headDiv">
+					&nbsp;
+				</div>
+			</li>
+		</ul>
+
+		<ul class="priceList descList">
+			<li class="priceRow" style="padding-top:14px;">
+				Price
+			</li>
+			<li>Access to Calculators</li>
+			<li>Login</li>
+			<li>Create Materials</li>
+			<li>Create Cross Sections</li>
+			<li>Save Files</li>
+			<li>Reporting</li>
+		</ul>
+		
+	</div>
+
+	<!-- Free version -->
+	<div class="priceColumn">
+
+		<ul class="header headerTier headerTier1">
+			<li>
+				<a href="https://mechanicalc.com/free-use">
+					<div class="headDiv">
+						Free
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="priceList tierList">
+
+			<li class="priceRow" style="padding-top:14px;">
+				Free
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="The calculators on this site can be used for free on a limited basis, but to obtain full use of the calculators you must sign up for an account.">
+					<div class="textWide">
+						Limited
+					</div>
+					<div class="textNarrow">
+						<b>Limited</b> Access to Calculators
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="The free versions of the calculators do not require a login.">
+					<div class="textWide">
+						None
+					</div>
+					<div class="textNarrow">
+						<b>No</b> Login
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="The free version only gives access to a handful of pre-defined materials.  To create new materials and to access our materials database, you must sign up for a paid subscription.">
+					<div class="textWide">
+						<span class="xMark fa fa-times" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Pre-defined</b> Materials
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="The free version only gives access to a handful of pre-defined cross sections.  To create new cross sections and to access our cross sections database, you must sign up for a paid subscription.">
+					<div class="textWide">
+						<span class="xMark fa fa-times" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Pre-defined</b> Cross Sections
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Without a paid subscription, you will not be able to save your work.">
+					<div class="textWide">
+						<span class="xMark fa fa-times" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>No</b> Saved Files
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Without a paid subscription, you will not be able to download reports of your results.">
+					<div class="textWide">
+						<span class="xMark fa fa-times" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>No</b> Reporting
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="https://mechanicalc.com/free-use">Learn More »</a>
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- Individual -->
+	<div class="priceColumn">
+		
+		<ul class="header headerTier headerTier2">
+			<li>
+				<a href="https://mechanicalc.com/auth/register-individual">
+					<div class="headDiv">
+						Individual
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="priceList tierList">
+
+			<li class="priceCell priceRow">
+				<div tooltip-position="bottom" tooltip="Pay yearly, monthly, or for a single semester.  Cancel anytime.">
+					<table class="tbl-center">
+						<tbody><tr>
+							<td class="text-left text-nowrap">
+								USD $9.99 /month
+							</td>
+						</tr>
+						<tr>
+							<td class="text-left text-nowrap">
+								USD $99.99 /year
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Receive unrestricted access to all calculators and other content on this site.">
+					<div class="textWide">
+						Full
+					</div>
+					<div class="textNarrow">
+						<b>Full</b> Access to Calculators
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Receive individual login credentials that you can use to log in on any device.">
+					<div class="textWide">
+						Individual
+					</div>
+					<div class="textNarrow">
+						<b>Individual</b> Login
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Create new materials for use in the calculators. Receive full access to the materials database.  Download your personal materials database to a file.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Create</b> Materials
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Create new cross sections for use in the calculators. Receive full access to the cross sections database.  Download your personal cross sections database to a file.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Create</b> Cross Sections
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Save input files so that you never lose your work.  Upload the input files to pick up where you left off.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Unlimited</b> Saved Files
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Generate beautifully formatted reports to document results.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Unlimited</b> Reporting
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="https://mechanicalc.com/individual-subscription">Learn More »</a>
+			</li>
+			<li class="buyBtnCell btnTier2">
+				<a href="https://mechanicalc.com/auth/register-individual" class="btn btn-primary">Sign Up Now</a>
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- Corporate -->
+	<div class="priceColumn">
+
+		<ul class="header headerTier headerTier3">
+			<li>
+				<a href="https://mechanicalc.com/auth/register-group">
+					<div class="headDiv">
+						Group
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="priceList tierList">
+
+			<li class="priceCell priceRow">
+				<div tooltip-position="bottom" tooltip="Pay either yearly or monthly.  Cancel anytime.">
+					<table class="tbl-center">
+						<tbody><tr>
+							<td class="text-left text-nowrap">
+								USD $29.99 /month
+							</td>
+						</tr>
+						<tr>
+							<td class="text-left text-nowrap">
+								USD $299.99 /year
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Receive unrestricted access to all calculators and other content on this site.">
+					<div class="textWide">
+						Full
+					</div>
+					<div class="textNarrow">
+						<b>Full</b> Access to Calculators
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Manage a pool of floating licenses that can be shared between multiple users. Ideal for commercial use.">
+					
+					<div class="textWide">
+						Floating Licenses &nbsp;<span class="fa fa-retweet" style="font-size:1.1rem; color:seagreen;" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Floating Licenses</b> &nbsp;<span class="fa fa-retweet" style="font-size:1.1rem; color:seagreen;" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Create new materials for use in the calculators. Receive full access to the materials database.  Download your personal materials database to a file.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Create</b> Materials
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Create new cross sections for use in the calculators. Receive full access to the cross sections database.  Download your personal cross sections database to a file.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Create</b> Cross Sections
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Save input files so that you never lose your work.  Upload the input files to pick up where you left off.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Unlimited</b> Saved Files
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Generate beautifully formatted reports to document results.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Unlimited</b> Reporting
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="https://mechanicalc.com/group-subscription">Learn More »</a>
+			</li>
+			<li class="buyBtnCell btnTier3">
+				<a href="https://mechanicalc.com/auth/register-group" class="btn btn-primary">Sign Up Now</a>
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- Classroom -->
+	<div class="priceColumn">
+
+		<ul class="header headerTier headerTier4">
+			<li>
+				<a href="https://mechanicalc.com/auth/register-classroom">
+					<div class="headDiv">
+						Classroom
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="priceList tierList">
+
+			<li class="priceRow">
+				<div tooltip-position="bottom" tooltip="Pay yearly, monthly, or for a single semester.  Cancel anytime.">
+					Bulk pricing (≥20 educational licenses)
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Receive unrestricted access to all calculators and other content on this site.">
+					<div class="textWide">
+						Full
+					</div>
+					<div class="textNarrow">
+						<b>Full</b> Access to Calculators
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Manage a pool of floating licenses shared between your students.">
+					
+					<div class="textWide">
+						Floating Licenses &nbsp;<span class="fa fa-retweet" style="font-size:1.1rem; color:seagreen;" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Floating Licenses</b> &nbsp;<span class="fa fa-retweet" style="font-size:1.1rem; color:seagreen;" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Create new materials for use in the calculators. Receive full access to the materials database.  Download your personal materials database to a file.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Create</b> Materials
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Create new cross sections for use in the calculators. Receive full access to the cross sections database.  Download your personal cross sections database to a file.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Create</b> Cross Sections
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Save input files so that you never lose your work.  Upload the input files to pick up where you left off.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Unlimited</b> Saved Files
+					</div>
+				</div>
+			</li>
+			<li>
+				<div tooltip-position="bottom" tooltip="Generate beautifully formatted reports to document results.">
+					<div class="textWide">
+						<span class="checkMark fa fa-check" aria-hidden="true"></span>
+					</div>
+					<div class="textNarrow">
+						<b>Unlimited</b> Reporting
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="https://mechanicalc.com/classroom-subscription">Learn More »</a>
+			</li>
+			<li class="buyBtnCell btnTier4">
+				<a href="https://mechanicalc.com/auth/register-classroom" class="btn btn-primary">Sign Up Now</a>
+			</li>
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="priceAfter"></div>
+
+
+
+	</div>
+</div>
+
+	
+	
+	
+
+<div class="row">
+	<div class="col-md-12">
+		<h2>Looking for Other Calculators?</h2>
+
+		<p>
+			Here are just a few of the <a href="https://mechanicalc.com/calculators/">calculators</a> that we have to offer:
+		</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+
+		<p style="font-size:16px;">
+			<a href="https://mechanicalc.com/calculators/beam-analysis/">Beam Calculator</a>
+		</p>
+
+		<div class="row" style="text-align:center">
+			<a href="https://mechanicalc.com/calculators/beam-analysis/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/beam-calculator-small-ad-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/beam-calculator-small-ad-01.png" alt="Beam Calculator">
+				</picture>
+			</a>
+		</div>
+	</div>
+	<div class="col-md-3">
+
+		<p style="font-size:16px;">
+			<a href="https://mechanicalc.com/calculators/bolted-joint-analysis/">Bolted Joint Analysis</a>
+		</p>
+
+		<div class="row" style="text-align:center">
+			<a href="https://mechanicalc.com/calculators/bolted-joint-analysis/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/bolt-calculator-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/bolt-calculator-01.png" alt="Bolted Joint Calculator">
+				</picture>
+			</a>
+		</div>
+	</div>
+	<div class="col-md-3">
+
+		<p style="font-size:16px;">
+			<a href="https://mechanicalc.com/calculators/lifting-lug-analysis/">Lug Analysis</a>
+		</p>
+
+		<div class="row" style="text-align:center">
+			<a href="https://mechanicalc.com/calculators/lifting-lug-analysis/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/lug-calculator-small-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/lug-calculator-small-01.png" alt="Lug Calculator">
+				</picture>
+			</a>
+		</div>
+	</div>
+	<div class="col-md-3">
+
+		<p style="font-size:16px;">
+			<a href="https://mechanicalc.com/calculators/column-buckling/">Column Buckling Calculator</a>
+		</p>
+
+		<div class="row" style="text-align:center">
+			<a href="https://mechanicalc.com/calculators/column-buckling/">
+				<picture>
+					<source srcset="/static/img/Ads/Optimized/column-buckling-calculator-01.webp" type="image/webp">
+					<img style="max-width:100%;" src="./Stress-Strain Curve Calculator _ MechaniCalc_files/column-buckling-calculator-01.png" alt="Column Buckling Calculator">
+				</picture>
+			</a>
+		</div>
+	</div>
+</div>
+
+	
+	<!-- ==================================================================== -->
+	
+
+	<script>
+		
+		var routes = undefined;
+		var curveWrkr = undefined;
+
+		resourceLoader.subscribeOnLoadedJS(['calc', 'bearFight', 'refLib'], function () {
+
+
+			// Routes:
+			routes = new Routes();
+			routes.getStressStrainCurve = "/calculators/materials/get_stress_strain_curve";
+			routes.printCurvePoints = "/calculators/materials/print_curve_points";
+						
+			
+			curveWrkr = new CurveWorker();
+			
+			
+			// Flash the Unit radio buttons:
+			var numFlash = userLoggedIn() ? 1 : 3;
+			var tabStyle = { 'backgroundColor': 'PeachPuff' };
+			var toggleHoldTime = 550;  var delay = 100;
+			BF.toggleStyle_Array( ['unitRdo-custom', 'unitRdo-english', 'unitRdo-SI'], tabStyle, toggleHoldTime, { 'delayMS':delay, 'maxCount':2*numFlash } );  // flash the Unit radio buttons
+
+		});
+		
+	</script>
+
+
+
+
+
+					<!-- ================================================================================ -->
+					<!-- Feedback form: -->
+					 
+						<!-- They're logged in... show the Feedback Form: -->
+						
+<div class="card feedback-card">
+	<div class="card-header">
+		<h3>Feedback</h3>
+	</div>
+	<div class="card-content">
+		<p>
+			Do you have any comments or suggestions?  We would love to hear them!
+		</p>
+		
+		
+			<div class="form-group">
+				<input id="txtFeedbackEmail" type="email" value="" class="email" placeholder="Email address (so that we can get back to you)">
+			</div>
+		
+
+		<div class="form-group">
+			<textarea id="txtFeedbackMessage" rows="2"></textarea>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-5 col-sm-4 col-lg-3 col-xl-2"><button id="btnSubmitFeedback" class="btn btn-primary">Submit Feedback</button></div>
+			<div class="col-xs-7 col-sm-8 col-lg-9 col-xl-10" id="divFeedbackMsgAlert"></div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	var btnSubmitFeedback = document.getElementById('btnSubmitFeedback');
+	btnSubmitFeedback.addEventListener("click", function (event) {
+
+		var sendURL = "/send-feedback";
+
+		var feedbackMsgAlert = new RL.FormMsg('divFeedbackMsgAlert');
+		var txtFeedbackMessage = document.getElementById('txtFeedbackMessage');
+		var resSpan = document.getElementById('resultVar');
+				
+		var resStr = '';
+		if (resSpan) {
+			var storageVar = resSpan.innerHTML;
+			resStr = localStorage.getItem(storageVar) || '';
+		}
+		
+		var email = '';
+		
+			var txtFeedbackEmail = document.getElementById('txtFeedbackEmail');
+			email = txtFeedbackEmail.value;
+		
+
+		var wrapUp = function () {
+			feedbackMsgAlert.setMsg('Thanks for submitting your comment!', { isFlash: false, clearMS: 5000 });
+			txtFeedbackMessage.value = '';
+
+			
+				txtFeedbackEmail.value = '';
+			
+		}
+
+		var onFail = function () {
+			feedbackMsgAlert.setMsg('Error: Could not contact server.', { isFlash: true, clearMS: 10000 });
+		}
+
+		var msg = txtFeedbackMessage.value;
+
+		if (!msg) {
+			feedbackMsgAlert.setMsg('Please enter a message before submitting feedback!', { isFlash: true, clearMS: 10000 });
+		} else if (!email) {
+			feedbackMsgAlert.setMsg('Please enter an email address so we can get back to you!', { isFlash: true, clearMS: 10000 });
+		} else {
+
+			BF.AJAX.post({
+				'url': sendURL,
+				'args': { message: msg, email: email, resultStr: resStr },
+				'onDone': wrapUp,
+				'onFail': onFail
+			});
+		}
+
+	});
+</script>
+					
+					<!-- ================================================================================ -->
+
+				</div>
+		
+			</main>
+		</div>
+
+
+		<footer class="foot-sticky">
+			<div class="container right-sidebar-exists">
+				<div class="row">
+					<div class="col-md-4">
+						<p class="text-muted">
+							©&nbsp;2014-2024 MechaniCalc,&nbsp;Inc.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<p class="text-muted">
+							<a href="https://mechanicalc.com/policies/terms_and_conditions" style="color:grey;">Terms&nbsp;&amp; Conditions</a>
+						</p>
+					</div>
+					<div class="col-md-2">
+						<p class="text-muted">
+							<a href="https://mechanicalc.com/policies/privacy_policy" style="color:grey;">Privacy&nbsp;Policy</a>
+						</p>
+					</div>
+					<div class="col-md-3 text-right">
+						<p style="margin: 0.7rem 0;">
+							<a href="https://www.linkedin.com/company/mechanicalc" class="fa fa-btn-circle fa-linkedin"></a>
+							<a href="https://www.facebook.com/MechaniCalcEng" class="fa fa-btn-circle fa-facebook"></a>
+							<a href="https://twitter.com/MechaniCalcEng" class="fa fa-btn-circle fa-twitter"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<!-- Facebook SDK: -->
+		<div id="fb-root"></div>
+		
+
+		<!-- Scripts: -->
+		
+		
+
+		<script>
+			resourceLoader.subscribeOnLoadedJS(['bearFight'], function () {
+				// Initialize BearFight!
+				BF.initialize();
+			});
+		</script>
+
+		
+		<script>
+			resourceLoader.__pageIsLoaded();
+			resourceLoader.__loadResources();
+		</script>
+		
+		
+	
+
+
+</body></html>
