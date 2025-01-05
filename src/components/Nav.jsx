@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Nav() {
     const handleContact = () => {
         const element = document.querySelector(".contact-section");
@@ -28,6 +30,10 @@ function Nav() {
                     <span>|</span>
                     <li>
                         <a onClick={handleContact} className="hover:underline">CONTACT US</a>
+                    </li>
+                    <span>|</span>
+                    <li>
+                        <Link to="/history" className="hover:underline">HISTORY</Link>
                     </li>
                 </ul>
             </div>

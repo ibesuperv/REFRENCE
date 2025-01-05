@@ -25,7 +25,7 @@ async function run(prompt, setStoresearch) {
         setStoresearch(prev => {
             const updatedStore = prev.map(item => {
                 if (item.user === prompt && item.loading === true) {
-                    return { ...item, ai: result.response.text().replace(/[*]+/g, ""), loading: false }; // Remove asterisks from response
+                    return { ...item, ai: result.response.text().replace(/[*]+/g, ""), loading: false };
                 }
                 return item;
             });
@@ -49,24 +49,23 @@ function Ai() {
         }
     };
 
-
     return (
-        <div className="flex flex-col items-center justify-between min-h-screen bg-gradient-to-b from-blue-50 to-purple-100 py-6 px-6">
+        <div className="flex flex-col cursor-default items-center justify-between min-h-screen bg-gradient-to-b from-blue-50 to-purple-100 py-6 px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center space-y-4 mb-6">
                 <Link to="/">
-                <button
-                    className="absolute top-4 left-4 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg shadow-md hover:from-red-600 hover:to-pink-600 focus:outline-none transition duration-300 ease-in-out"
+                    <button
+                        className="absolute top-4 left-4 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg shadow-md hover:from-red-600 hover:to-pink-600 focus:outline-none transition duration-300 ease-in-out"
                     >
-                    Return to Home
-                </button>
-                    </Link>
-                <h1 className="text-4xl font-extrabold text-gray-900">AI Chat Assistant</h1>
-                <p className="text-lg text-gray-700">Ask me anything and I'll do my best to provide you with an answer!</p>
+                        Return to Home
+                    </button>
+                </Link>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900">AI Chat Assistant</h1>
+                <p className="text-sm sm:text-lg text-gray-700">Ask me anything and I'll do my best to provide you with an answer!</p>
             </div>
 
             {/* Chat messages container */}
-            <div className="w-full max-w-2xl absolute top-1/4 bg-white rounded-xl shadow-xl p-6 overflow-y-auto min-h-[55vh]">
+            <div className="flex-grow w-full max-w-3xl bg-white rounded-xl shadow-xl p-4 sm:p-6 overflow-y-auto min-h-[60vh] max-h-[70vh] mb-24">
                 {storesearch.length > 0 ? (
                     <div className="space-y-4">
                         {storesearch.map((item, index) => (
@@ -87,27 +86,27 @@ function Ai() {
                         ))}
                     </div>
                 ) : (
-                    <div className="font-semibold text-gray-700">ASK YOUR QUESTIONS</div>
+                    <div className="font-semibold text-gray-700 text-center">ASK YOUR QUESTIONS</div>
                 )}
             </div>
 
             {/* Fixed bottom-centered input and button */}
-            <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-2xl p-4 bg-white shadow-lg rounded-lg z-10">
+            <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-3xl p-4 bg-white shadow-lg rounded-lg z-10">
                 <div className="flex items-center justify-between space-x-4">
                     <input
                         type="text"
                         value={searchAI}
                         onChange={(e) => setSearchAI(e.target.value)}
-                        className="w-full p-4 bg-gray-100 border-2 border-gray-300 rounded-xl text-lg text-gray-800 focus:outline-none focus:border-blue-500 placeholder-gray-400 transition duration-200 ease-in-out"
+                        className="w-full p-3 sm:p-4 bg-gray-100 border-2 border-gray-300 rounded-xl text-sm sm:text-lg text-gray-800 focus:outline-none focus:border-blue-500 placeholder-gray-400 transition duration-200 ease-in-out"
                         placeholder="Ask any questions"
                         required
                     />
                     <button
                         onClick={handleSend}
                         disabled={loading}
-                        className="p-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 focus:outline-none disabled:bg-gray-300 transition duration-300 ease-in-out"
+                        className="p-3 sm:p-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 focus:outline-none disabled:bg-gray-300 transition duration-300 ease-in-out"
                     >
-                        <IoSend size={24} />
+                        <IoSend size={20} sm={24} />
                     </button>
                 </div>
             </div>

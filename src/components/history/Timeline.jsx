@@ -1,5 +1,5 @@
 import { Chrono } from "react-chrono";
-import data from "./data1"
+import data from "./data1" 
 
 
 

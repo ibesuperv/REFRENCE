@@ -73,3 +73,9 @@ html, body {
     animation: spin 4s linear infinite;
     transform-origin: center; /* Ensure rotation happens around the center */
   }
+
+  /* styles.css */
+.timeline-event:hover {
+  background-color: #f0f0f0; /* Slight background on hover */
+  cursor: pointer;
+}

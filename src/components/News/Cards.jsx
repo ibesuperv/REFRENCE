@@ -7,8 +7,6 @@ function Cards(props) {
                         className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
                         key={index}
                     >
-                        
-                        
                         <div className="imgpart">
                                 <img
                                     src={item.urlToImage || '/image.png'}  // Use default image if urlToImage is null
