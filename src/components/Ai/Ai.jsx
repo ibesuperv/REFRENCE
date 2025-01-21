@@ -46,6 +46,8 @@ function Ai() {
         if (searchAI.trim() && searchAI.length <= 200) {
             setSearchAI('');
             run(searchAI, setStoresearch);
+            console.log(storesearch);
+           
         }
     };
 

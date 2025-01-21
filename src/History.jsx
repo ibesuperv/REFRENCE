@@ -3,6 +3,7 @@ import Mainhistory from "./components/history/Mainhistory";
 import { Link } from "react-router-dom";
 import Timeline from "./components/history/Timeline";
 import QuizApp from "./components/history/Quiz/QuizApp";
+import CaseCards from "./caseStudies/CaseCards";
 
 function History() {
   const [selectedComponent, setSelectedComponent] = useState("mainhistory");
@@ -47,6 +48,17 @@ function History() {
           >
             Timeline
           </button>
+          <button
+            onClick={() => handleSelection("caseStudies")}
+            className={`px-4 py-2 rounded-lg text-lg font-semibold transition ${
+              selectedComponent === "caseStudies"
+                ? "bg-amber-300 text-white"
+                : "text-amber-300 hover:bg-indigo-50"
+            }`}
+          >
+            Case Studies
+          </button>
+          
         </div>
         <Link to="/">
           <button className="bg-blue-600 text-white py-2 px-6 rounded-lg text-lg shadow-md hover:bg-blue-700 transition">
@@ -55,11 +67,12 @@ function History() {
         </Link>
       </nav>
 
-      {/* Component Display */}
       <div className="transition-all duration-500">
         {selectedComponent === "mainhistory" && <Mainhistory />}
         {selectedComponent === "quiz" && <QuizApp />}
         {selectedComponent === "timeline" && <Timeline />}
+        {selectedComponent === "caseStudies" && <CaseCards />}
+        
       </div>
     </div>
   );

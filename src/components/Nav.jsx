@@ -11,21 +11,12 @@ function Nav() {
         element?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const handleAbout = () => {
-        const element = document.querySelector(".about-section");
-        element?.scrollIntoView({ behavior: 'smooth' });
-    };
-
     return (
         <div className="fixed top-0 w-full h-auto bg-transparent flex justify-center items-center z-[9999]">
             <div className="z-[9999] w-1/3 h-14 bg-zinc-800 mt-5 text-xl py-4 rounded-full shadow-lg">
                 <ul className="flex justify-evenly cursor-pointer text-white">
                     <li>
                         <a onClick={handleHome} className="hover:underline">HOME</a>
-                    </li>
-                    <span>|</span>
-                    <li>
-                        <a onClick={handleAbout} className="hover:underline">ABOUT US</a>
                     </li>
                     <span>|</span>
                     <li>
