@@ -17,7 +17,7 @@ function Resources() {
       duration: 3,
       scrollTrigger: {
         trigger: ".parent",
-        start: "top 40%",
+        start: "top 80%",
         scrub: 6,
         ease: "power1.inOut",
       },
