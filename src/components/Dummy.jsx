@@ -9,6 +9,7 @@ function Dummy() {
   useEffect(() => {
     gsap.to(".enlarge", {
       scale: 100,
+      color:"black",
       height: "100rem",
       width: "100rem",
       duration: 3,
@@ -28,14 +29,19 @@ function Dummy() {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen aii overflow-hidden">
+    <div className="relative w-screen h-screen text-gray-700 aii overflow-hidden">
       {/* Background Circle */}
       <div className="enlarge z-0 absolute overflow-hidden left-0 top-0 rounded-full bg-white w-0 h-0" />
 
       {/* Text Content */}
-      <div className="ai-part w-full h-full text-purple-400 bg-transparent text-5xl z-10 relative flex justify-center items-center">
-        <h1 className="text-10xl font-bold text-black">ANYWHERE STUCKED?<span className="text-blue-600 underline text-4xl"> <Link to="/ai">Ask Ai</Link></span></h1>
-        
+      <div className="ai-part w-full h-full bg-transparent text-5xl z-10 relative flex flex-col justify-center items-center">
+        <h1 className="text-10xl font-bold ">ANYWHERE STUCKED?</h1> 
+          <Link to="/ai">
+        <button className="mt-8 px-6 py-3 text-lg font-medium bg-blue-600 rounded-full text-white shadow-lg hover:bg-blue-700 transition-all animate-bounce-in">
+                    ASK AI
+                </button>
+          </Link>
+           
       </div>
     </div>
   );

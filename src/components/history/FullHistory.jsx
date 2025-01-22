@@ -30,8 +30,9 @@ function FullHistory() {
                 >
                     Back
                 </button>
-                <h1 style={{ fontSize: '64px', fontWeight: 'bold', fontFamily: 'Times New Roman, serif' }}>{historyItem.event}</h1>
-                <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#555', marginTop: '10px' }}>A dive into the depths of history</p>
+                <h1 className="text-4xl md:text-3xl font-bold font-serif">{historyItem.event}</h1>
+                <p className="text-base md:text-lg italic text-gray-600 mt-2">A dive into the depths of history</p>
+
             </header>
 
             <main style={{ display: 'grid', gridTemplateColumns: '1fr 3fr', gap: '20px' }}>

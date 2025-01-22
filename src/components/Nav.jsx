@@ -12,17 +12,17 @@ function Nav() {
     };
 
     return (
-        <div className="fixed top-0 w-full h-auto bg-transparent flex justify-center items-center z-[9999]">
-            <div className="z-[9999] w-1/3 h-14 bg-zinc-800 mt-5 text-xl py-4 rounded-full shadow-lg">
-                <ul className="flex justify-evenly cursor-pointer text-white">
+        <div className="fixed top-0 w-full bg-transparent flex justify-center items-center z-[9999]">
+            <div className="w-full md:w-2/3 lg:w-1/3 h-auto bg-zinc-800 mt-5 text-lg md:text-lg py-3  rounded-full shadow-lg">
+                <ul className="flex justify-around items-center px-4 sm:text-sm text-white">
                     <li>
-                        <a onClick={handleHome} className="hover:underline">HOME</a>
+                        <a onClick={handleHome} className="hover:underline cursor-pointer">HOME</a>
                     </li>
-                    <span>|</span>
+                    <span className="hidden md:inline">|</span>
                     <li>
-                        <a onClick={handleContact} className="hover:underline">CONTACT US</a>
+                        <a onClick={handleContact} className="hover:underline cursor-pointer">CONTACT US</a>
                     </li>
-                    <span>|</span>
+                    <span className="hidden md:inline">|</span>
                     <li>
                         <Link to="/history" className="hover:underline">HISTORY</Link>
                     </li>
