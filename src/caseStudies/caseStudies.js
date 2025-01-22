@@ -93,64 +93,65 @@ const caseStudies = [
           { "image2": "/img/Ind/I8.png" }
         ]
       },
-      {
-        id: 3,
-        title: "Sardar vallabhbhai patel and the integration of princely states",
-        year: 1919,
-        contents: [
-          {
-            key: "1",
-            description: "On September 2, 1946, the Viceroy Lord Wavell announced the formation of an Interim Government with Jawaharlal Nehru as the Vice-President of the Executive Council. Sardar Patel was allocated the Home portfolio along with Information and Broadcasting. Before Independence, on August 1, 1947, Nehru formally invited Patel to join his Cabinet, calling him the 'strongest pillar.' Patel responded with loyalty and devotion, emphasizing their unbreakable combination.",
-            images: [
-              { "image1": "/img/S/s1.png" },
-              { "image2": "/img/S/s2.png" }
-            ]
-          },
-          {
-            key: "2",
-            description: "Sardar Patel became India’s first Deputy Prime Minister and held portfolios such as Home, Information & Broadcasting, and States. His primary challenge was integrating 562 princely states into the Indian Union. This monumental task involved tact, vision, and statesmanship, earning him accolades as the architect of a unified India. Morarji Desai considered this integration Patel’s crowning achievement.",
-            images: [
-              { "image1": "/img/S/s3.png" },
-              { "image2": "/img/S/s4.png" }
-            ]
-          },
-          {
-            key: "3",
-            description: "The princely states varied in size and were largely autocratic, with no democratic governance. Many rulers resisted integration, and unrest was growing among their populations. Sardar Patel sought a peaceful revolution to consolidate these states into a unified India. The involvement of Lord Mountbatten, who leveraged his prestige and tact to persuade rulers, significantly aided this process.",
-            images: [
-              { "image1": "/img/S/s5.png" },
-              { "image2": "/img/S/s6.png" }
-            ]
-          },
-          {
-            key: "4",
-            description: "Patel established the States Department on July 5, 1947, appointing V.P. Menon as its Secretary. The department worked tirelessly to secure the accession of states to India in areas like defense, foreign affairs, and communications. Despite opposition from the Muslim League, Patel’s team skillfully negotiated with rulers, appealing to their patriotism and self-interest, ultimately ensuring successful integration.",
-            images: [
-              { "image1": "/img/S/s7.png" },
-              { "image2": "/img/S/s8.png" }
-            ]
-          },
-          {
-            key: "5",
-            description: "Challenges arose with states like Jammu and Kashmir, Hyderabad, and Junagadh. Junagadh joined India after a plebiscite, while Hyderabad was integrated through military action. The tribal invasion in Jammu and Kashmir led to the first Indo-Pak War, concluding in 1949. These efforts solidified India’s territorial integrity, underscoring Patel’s determination and strategic acumen.",
-            images: [
-              { "image1": "/img/S/s9.png" },
-              { "image2": "/img/S/s10.png" }
-            ]
-          },
-          {
-            key: "6",
-            description: "Patel’s contributions laid the foundation for a unified India, transforming princely states into a cohesive nation. This achievement added significant territory and population to India, overcoming artificial barriers. Nehru, Mountbatten, and V.P. Menon also played pivotal roles in this endeavor. Patel’s legacy as the ‘Iron Man of India’ remains integral to India’s history and its path to modern governance.",
-            images: [
-              { "image1": "/img/S/s11.png" },
-              { "image2": "/img/S/s12.png" }
-            ]
-          },
-        ]
-      }
-
     ]
   }
+  ,
+  {
+    id: 3,
+    title: "Sardar vallabhbhai patel and the integration of princely states",
+    year: 1919,
+    contents: [
+      {
+        key: "1",
+        description: "On September 2, 1946, the Viceroy Lord Wavell announced the formation of an Interim Government with Jawaharlal Nehru as the Vice-President of the Executive Council. Sardar Patel was allocated the Home portfolio along with Information and Broadcasting. Before Independence, on August 1, 1947, Nehru formally invited Patel to join his Cabinet, calling him the 'strongest pillar.' Patel responded with loyalty and devotion, emphasizing their unbreakable combination.",
+        images: [
+          { "image1": "/img/S/s1.png" },
+          { "image2": "/img/S/s2.png" }
+        ]
+      },
+      {
+        key: "2",
+        description: "Sardar Patel became India’s first Deputy Prime Minister and held portfolios such as Home, Information & Broadcasting, and States. His primary challenge was integrating 562 princely states into the Indian Union. This monumental task involved tact, vision, and statesmanship, earning him accolades as the architect of a unified India. Morarji Desai considered this integration Patel’s crowning achievement.",
+        images: [
+          { "image1": "/img/S/s3.png" },
+          { "image2": "/img/S/s4.png" }
+        ]
+      },
+      {
+        key: "3",
+        description: "The princely states varied in size and were largely autocratic, with no democratic governance. Many rulers resisted integration, and unrest was growing among their populations. Sardar Patel sought a peaceful revolution to consolidate these states into a unified India. The involvement of Lord Mountbatten, who leveraged his prestige and tact to persuade rulers, significantly aided this process.",
+        images: [
+          { "image1": "/img/S/s5.png" },
+          { "image2": "/img/S/s6.png" }
+        ]
+      },
+      {
+        key: "4",
+        description: "Patel established the States Department on July 5, 1947, appointing V.P. Menon as its Secretary. The department worked tirelessly to secure the accession of states to India in areas like defense, foreign affairs, and communications. Despite opposition from the Muslim League, Patel’s team skillfully negotiated with rulers, appealing to their patriotism and self-interest, ultimately ensuring successful integration.",
+        images: [
+          { "image1": "/img/S/s7.png" },
+          { "image2": "/img/S/s8.png" }
+        ]
+      },
+      {
+        key: "5",
+        description: "Challenges arose with states like Jammu and Kashmir, Hyderabad, and Junagadh. Junagadh joined India after a plebiscite, while Hyderabad was integrated through military action. The tribal invasion in Jammu and Kashmir led to the first Indo-Pak War, concluding in 1949. These efforts solidified India’s territorial integrity, underscoring Patel’s determination and strategic acumen.",
+        images: [
+          { "image1": "/img/S/s9.png" },
+          { "image2": "/img/S/s10.png" }
+        ]
+      },
+      {
+        key: "6",
+        description: "Patel’s contributions laid the foundation for a unified India, transforming princely states into a cohesive nation. This achievement added significant territory and population to India, overcoming artificial barriers. Nehru, Mountbatten, and V.P. Menon also played pivotal roles in this endeavor. Patel’s legacy as the ‘Iron Man of India’ remains integral to India’s history and its path to modern governance.",
+        images: [
+          { "image1": "/img/S/s11.png" },
+          { "image2": "/img/S/s12.png" }
+        ]
+      },
+    ]
+  }
+
 ];
 
 export default caseStudies;
